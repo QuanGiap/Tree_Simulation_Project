@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../../game-of-life/lib/gchooser.h"
+#include "../../Tree_Simulation_Project/lib/gchooser.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)

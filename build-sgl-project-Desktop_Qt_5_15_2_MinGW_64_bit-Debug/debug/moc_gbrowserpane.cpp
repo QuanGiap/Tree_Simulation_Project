@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../../game-of-life/lib/gbrowserpane.h"
+#include "../../Tree_Simulation_Project/lib/gbrowserpane.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)

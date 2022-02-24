@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../../game-of-life/lib/gcanvas.h"
+#include "../../Tree_Simulation_Project/lib/gcanvas.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)

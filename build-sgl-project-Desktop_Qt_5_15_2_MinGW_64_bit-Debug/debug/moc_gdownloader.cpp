@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../../game-of-life/lib/gdownloader.h"
+#include "../../Tree_Simulation_Project/lib/gdownloader.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #include <QtCore/QList>
