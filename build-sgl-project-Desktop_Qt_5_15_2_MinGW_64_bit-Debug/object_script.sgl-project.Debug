@@ -49,9 +49,9 @@ debug/privateregexpr.o
 debug/privatestrlib.o
 debug/qtgui.o
 debug/require.o
-debug/LifeGui.o
-debug/LifeMain.o
-debug/LifeModel.o
+debug/Main.o
+debug/TreeBase.o
+debug/TreeBaseBehavior.o
 debug/moc_gbrowserpane.o
 debug/moc_gbutton.o
 debug/moc_gcanvas.o

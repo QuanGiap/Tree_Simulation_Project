@@ -49,9 +49,9 @@ release/privateregexpr.o
 release/privatestrlib.o
 release/qtgui.o
 release/require.o
-release/LifeGui.o
-release/LifeMain.o
-release/LifeModel.o
+release/Main.o
+release/TreeBase.o
+release/TreeBaseBehavior.o
 release/moc_gbrowserpane.o
 release/moc_gbutton.o
 release/moc_gcanvas.o
