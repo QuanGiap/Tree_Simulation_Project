@@ -33,7 +33,9 @@ void TreeBaseBehavior::grow(bool isGrowW){
     if(isGrowW) setPosTime -= 2;
     int midPos = tree->getWidthData()/2;
     for(int i = 0;i<setPosTime;i++){
+        //add wood on the left side tree
         tree->setTrue(tree->getHeight()+1-i,midPos-i);
+        //add wood on the right side tree
         tree->setTrue(tree->getHeight()+1-i,midPos+i);
     }
     tree->getHeight()+=1;
