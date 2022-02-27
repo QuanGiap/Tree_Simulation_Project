@@ -6,7 +6,7 @@ public:
     Apple();
     virtual int getGrownSpeed()const override;
     virtual string getFruitColor() const override;
-    virtual virtual string getType() const override;
+    virtual string getType() const override;
 };
 
 #endif // APPLE_H
