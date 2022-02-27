@@ -1,9 +1,7 @@
 #ifndef SAPLING_H
 #define SAPLING_H
-
-
-class Sapling
-{
+#include "TreeBaseBehavior.h"
+class Sapling:public TreeBaseBehavior{
 public:
     Sapling();
 };
