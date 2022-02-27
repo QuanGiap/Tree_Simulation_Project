@@ -1,8 +1,6 @@
 #include "Apple.h"
-
-Apple::Apple()
-{
-
+Apple::Apple(int height,int width){
+    createData(height,width);
 }
 
 int Apple::getGrownSpeed() const{

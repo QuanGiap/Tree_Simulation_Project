@@ -8,9 +8,8 @@ public:
     void setTreeBase(TreeBase& tree);
     void growWidth();
     void growHeight();
-    virtual bool IsOld() const;
     virtual bool isOld() const;
-    virtual string getType() const;
+    virtual string getType() const = 0;
 private:
     TreeBase* tree;
 };

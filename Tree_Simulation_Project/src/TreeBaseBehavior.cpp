@@ -6,10 +6,14 @@ void TreeBaseBehavior::setTreeBase(TreeBase& tree){
     this->tree = &tree;
 }
 
-bool TreeBaseBehavior::IsOld() const{
+bool TreeBaseBehavior::isOld() const{
     return tree->getAge() > 0;
 }
 
 TreeBase& TreeBaseBehavior::getTreeBase(){
     return *tree;
+}
+
+string TreeBaseBehavior::getType() const{
+    return "Base behavior";
 }

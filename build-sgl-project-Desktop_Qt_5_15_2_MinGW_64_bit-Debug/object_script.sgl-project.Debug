@@ -1,3 +1,10 @@
+debug/Adult.o
+debug/Apple.o
+debug/Lemon.o
+debug/Old.o
+debug/Orange.o
+debug/Sapling.o
+debug/TreeGui.o
 debug/console.o
 debug/gbrowserpane.o
 debug/gbutton.o

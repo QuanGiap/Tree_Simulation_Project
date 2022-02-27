@@ -74,14 +74,16 @@ SOURCES         *=  "" \
     src/Lemon.cpp \
     src/Old.cpp \
     src/Orange.cpp \
-    src/Sapling.cpp
+    src/Sapling.cpp \
+    src/TreeGui.cpp
 HEADERS         *=  "" \
     src/Adult.h \
     src/Apple.h \
     src/Lemon.h \
     src/Old.h \
     src/Orange.h \
-    src/Sapling.h
+    src/Sapling.h \
+    src/TreeGui.h
 
 # Gather any .cpp or .h files within the project folder (student/starter code).
 # Second argument true makes search recursive

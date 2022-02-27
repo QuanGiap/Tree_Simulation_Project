@@ -1,3 +1,10 @@
+release/Adult.o
+release/Apple.o
+release/Lemon.o
+release/Old.o
+release/Orange.o
+release/Sapling.o
+release/TreeGui.o
 release/console.o
 release/gbrowserpane.o
 release/gbutton.o

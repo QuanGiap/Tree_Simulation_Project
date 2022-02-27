@@ -3,7 +3,7 @@
 #include "TreeBase.h"
 class Orange:public TreeBase{
 public:
-    Orange();
+    Orange(int height,int width);
     virtual int getGrownSpeed() const override;
     virtual string getFruitColor() const override;
     virtual string getType() const override;

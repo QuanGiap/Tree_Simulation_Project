@@ -1,8 +1,7 @@
 #include "Lemon.h"
 
-Lemon::Lemon()
-{
-
+Lemon::Lemon(int height,int width){
+    createData(height,width);
 }
 
 int Lemon::getGrownSpeed() const{

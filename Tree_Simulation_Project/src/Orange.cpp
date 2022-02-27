@@ -1,8 +1,7 @@
 #include "Orange.h"
 
-Orange::Orange()
-{
-
+Orange::Orange(int height,int width){
+    createData(height,width);
 }
 
 int Orange::getGrownSpeed() const{
