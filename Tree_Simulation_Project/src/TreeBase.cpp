@@ -1,7 +1,5 @@
 #include "TreeBase.h"
-TreeBase::TreeBase(){
-}
-void TreeBase::createData(int height,int width){
+TreeBase::TreeBase(int height, int width){
     leafColor = "green";
     year = 0;
     for(int i = 0;i < height;i++){
@@ -19,21 +17,17 @@ void TreeBase::createData(int height,int width){
 void TreeBase::setTrue(int i, int j){
     data[i][j] = true;
 }
-int TreeBase::getWidth() const{
+int TreeBase::getWidthData() const{
     return data[0].size();
 }
-int TreeBase::getHeight() const{
+int TreeBase::getHeightData() const{
     return data.size();
 }
-vector<int> TreeBase::getLeafLocate(){
+vector<int>& TreeBase::getLeafLocate(){
     return leafPoint;
 }
-void TreeBase::updateLeafLocate(int i, int j){
-    leafPoint[0]+=i;
-    leafPoint[1]+=j;
-}
 bool TreeBase::isWood(int col, int row)const{
-    if(row<0||col<0||row>=getWidth()||col>=getHeight()) return false;
+    if(row<0||col<0||row>=getWidthData()||col>=getHeightData()) return false;
     return data[col][row];
 }
 int TreeBase::getAge() const{

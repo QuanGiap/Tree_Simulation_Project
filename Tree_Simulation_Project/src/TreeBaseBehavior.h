@@ -3,14 +3,15 @@
 #include "TreeBase.h"
 class TreeBaseBehavior{
 public:
-    TreeBaseBehavior();
+    TreeBaseBehavior(TreeBase& tree);
     TreeBase& getTreeBase();
-    void setTreeBase(TreeBase& tree);
-    void growWidth();
-    void growHeight();
+    bool isWood(int i,int j);
+    void grow(bool isGrowW);
+    virtual void update();
     virtual bool isOld() const;
     virtual string getType() const = 0;
 private:
+    void growWidth();
     TreeBase* tree;
 };
 #endif

@@ -1,6 +1,6 @@
 #include "TreeGui.h"
 
-TreeGui::TreeGui()
+TreeGui::TreeGui(int height, int width)
 {
 
 }

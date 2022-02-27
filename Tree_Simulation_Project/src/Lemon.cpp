@@ -1,7 +1,6 @@
 #include "Lemon.h"
 
-Lemon::Lemon(int height,int width){
-    createData(height,width);
+Lemon::Lemon(int height,int width):TreeBase(height,width){
 }
 
 int Lemon::getGrownSpeed() const{

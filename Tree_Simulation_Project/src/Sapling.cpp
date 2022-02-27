@@ -1,6 +1,5 @@
 #include "Sapling.h"
 
-Sapling::Sapling()
-{
+Sapling::Sapling(TreeBase& tree):TreeBaseBehavior(tree){
 
 }

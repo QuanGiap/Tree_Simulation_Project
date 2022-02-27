@@ -5,15 +5,13 @@
 using namespace std;
 class TreeBase{
 public:
-  TreeBase();
-  void createData(int height, int width);
+  TreeBase(int height, int width);
   int getAge() const;
-  int getWidth() const;
-  int getHeight() const;
+  int getWidthData() const;
+  int getHeightData() const;
   bool isWood(int col,int row)const;
   void setTrue(int i,int j);
-  vector<int> getLeafLocate();
-  void updateLeafLocate(int i, int j);
+  vector<int>& getLeafLocate();
   string getLeafColor() const;
   void setLeafColor(string color);
   virtual int getGrownSpeed() const;

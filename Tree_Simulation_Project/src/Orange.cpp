@@ -1,7 +1,6 @@
 #include "Orange.h"
 
-Orange::Orange(int height,int width){
-    createData(height,width);
+Orange::Orange(int height,int width):TreeBase(height,width){
 }
 
 int Orange::getGrownSpeed() const{

@@ -3,7 +3,7 @@
 #include "TreeBaseBehavior.h"
 class Sapling:public TreeBaseBehavior{
 public:
-    Sapling();
+    Sapling(TreeBase& tree);
 };
 
 #endif // SAPLING_H

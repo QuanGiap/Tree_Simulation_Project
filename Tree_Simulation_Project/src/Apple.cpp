@@ -1,6 +1,5 @@
 #include "Apple.h"
-Apple::Apple(int height,int width){
-    createData(height,width);
+Apple::Apple(int height,int width):TreeBase(height,width){
 }
 
 int Apple::getGrownSpeed() const{
