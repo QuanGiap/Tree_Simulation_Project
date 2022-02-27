@@ -4,13 +4,13 @@
 class TreeBaseBehavior{
 public:
     TreeBaseBehavior();
-    void setTreeBase(TreeBase& tree);
-    virtual bool IsOld() const;
     TreeBase& getTreeBase();
-    virtual void grow();
+    void setTreeBase(TreeBase& tree);
+    void growWidth();
+    void growHeight();
+    virtual bool IsOld() const;
     virtual bool isOld() const;
     virtual string getType() const;
-
 private:
     TreeBase* tree;
 };
