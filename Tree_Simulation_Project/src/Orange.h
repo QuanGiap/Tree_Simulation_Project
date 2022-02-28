@@ -7,7 +7,6 @@ public:
     virtual int getGrownSpeed() const override;
     virtual string getFruitColor() const override;
     virtual string getType() const override;
-
 };
 
 #endif // ORANGE_H

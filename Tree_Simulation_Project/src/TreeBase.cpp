@@ -1,4 +1,6 @@
 #include "TreeBase.h"
+#include <iostream>
+using namespace std;
 TreeBase::TreeBase(int rows, int cols){
     leafColor = "green";
     month = 0;
@@ -44,7 +46,7 @@ int& TreeBase::getAge() {
 string TreeBase::getLeafColor() const{
     return leafColor;
 }
-void TreeBase::setLeafColor(string color){
+void TreeBase::setLeafColor(const string color){
     leafColor = color;
 }
 int TreeBase::getGrownSpeed() const{
@@ -55,4 +57,14 @@ string TreeBase::getFruitColor() const{
 }
 string TreeBase::getType() const{
     return "Base";
+}
+ostream& operator<<(ostream& out, TreeBase& tree){
+    for(int i=0;i<tree.getHeightData();i++){
+        for(int j=0;j<tree.getWidthData();j++){
+            if(tree.isWood(i,j)) out<<'X';
+            else out<<'-';
+        }
+        out<<endl;
+    }
+    return out;
 }

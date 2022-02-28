@@ -12,7 +12,9 @@ bool TreeBaseBehavior::isOld() const{
 void TreeBaseBehavior::update(){
     grow(rand()%4==0);
 }
-
+TreeBaseBehavior* TreeBaseBehavior::switchState(){
+    return new TreeBaseBehavior(*tree);
+}
 void TreeBaseBehavior::growWidth(){
     int midPos = tree->getWidthData()/2;
     int offSet = 1+(tree->getWidth()/2);

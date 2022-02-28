@@ -3,7 +3,9 @@
 #include "TreeBaseBehavior.h"
 class Adult : public TreeBaseBehavior{
 public:
-    Adult();
+    Adult(TreeBase& tree);
+    virtual TreeBaseBehavior* switchState()override;
+    virtual string getType() const override;
 };
 
 #endif // ADULT_H

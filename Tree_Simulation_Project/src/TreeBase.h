@@ -15,10 +15,10 @@ public:
   void setTrue(int i,int j);
   vector<int>& getLeafLocate();
   string getLeafColor() const;
-  void setLeafColor(string color);
+  void setLeafColor(const string color);
   virtual int getGrownSpeed() const;
   virtual string getFruitColor() const;
-  virtual string getType() const = 0;
+  virtual string getType() const;
 private:
   string leafColor;
   vector<int> leafPoint;
@@ -27,4 +27,5 @@ private:
   int height;
   int month;
 };
+ostream& operator<<(ostream& out, TreeBase& tree);
 #endif
