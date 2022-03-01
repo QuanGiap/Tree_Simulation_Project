@@ -23,6 +23,7 @@ private:
   string leafColor;
   vector<int> leafPoint;
   vector<vector<bool>> data;
+  vector<int> fruitLocation;
   int width;
   int height;
   int month;

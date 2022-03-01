@@ -5,6 +5,7 @@ class Adult : public TreeBaseBehavior{
 public:
     Adult(TreeBase& tree);
     virtual TreeBaseBehavior* switchState()override;
+    virtual bool isOld()override;
     virtual string getType() const override;
 };
 

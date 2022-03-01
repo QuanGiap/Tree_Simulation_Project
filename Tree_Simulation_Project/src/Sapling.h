@@ -4,7 +4,8 @@
 class Sapling:public TreeBaseBehavior{
 public:
     Sapling(TreeBase& tree);
-     virtual TreeBaseBehavior* switchState() override;
+    virtual TreeBaseBehavior* switchState() override;
+    virtual bool isOld() override;
     virtual string getType() const override;
 };
 

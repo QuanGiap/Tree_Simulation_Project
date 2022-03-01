@@ -5,7 +5,7 @@ TreeBaseBehavior::TreeBaseBehavior(TreeBase& tree){
 bool TreeBaseBehavior::isWood(int i, int j){
     return tree->isWood(i,j);
 }
-bool TreeBaseBehavior::isOld() const{
+bool TreeBaseBehavior::isOld(){
     return tree->getAge() > 0;
 }
 

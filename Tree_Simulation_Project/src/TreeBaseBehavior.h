@@ -9,7 +9,7 @@ public:
     void grow(bool isGrowW);
     virtual TreeBaseBehavior* switchState();
     virtual void update();
-    virtual bool isOld() const;
+    virtual bool isOld();
     virtual string getType() const;
 private:
     void growWidth();
