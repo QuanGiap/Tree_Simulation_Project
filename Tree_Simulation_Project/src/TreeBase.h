@@ -5,13 +5,14 @@
 using namespace std;
 class TreeBase{
 public:
-  TreeBase(int rows, int col);
+  TreeBase(int i, int j, vector<vector<bool>>& table);
   int& getAge();
   int getWidthData() const;
   int getHeightData() const;
   int& getHeight();
   int& getWidth();
   bool isWood(int col,int row)const;
+  int getPlantPos()const;
   void setTrue(int i,int j);
   vector<int>& getLeafLocate();
   string getLeafColor() const;
@@ -22,8 +23,9 @@ public:
 private:
   string leafColor;
   vector<int> leafPoint;
-  vector<vector<bool>> data;
+  vector<vector<bool>>* data;
   vector<int> fruitLocation;
+  int plantPosition;
   int width;
   int height;
   int month;

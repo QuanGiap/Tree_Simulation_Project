@@ -16,14 +16,13 @@ TreeBaseBehavior* TreeBaseBehavior::switchState(){
     return new TreeBaseBehavior(*tree);
 }
 void TreeBaseBehavior::growWidth(){
-    int midPos = tree->getWidthData()/2;
     int offSet = 1+(tree->getWidth()/2);
     int startSet = tree->getHeight() - tree->getWidth()+(tree->getWidth()/2);
     for(int i = startSet;i >=0;i--){
         //add wood on the left side tree
-        tree->setTrue(tree->getHeightData()-i-1,midPos-offSet);
+        tree->setTrue(tree->getHeightData()-i-1,tree->getPlantPos()-offSet);
         //add wood in the right side tree
-        tree->setTrue(tree->getHeightData()-i-1,midPos+offSet);
+        tree->setTrue(tree->getHeightData()-i-1,tree->getPlantPos()+offSet);
     }
     tree->getWidth()+=2;
 }
@@ -31,13 +30,12 @@ void TreeBaseBehavior::grow(bool isGrowW){
     if(isGrowW) growWidth();
     int setPosTime = tree->getWidth()/2+1;
     if(isGrowW) setPosTime -= 1;
-    int midPos = tree->getWidthData()/2;
     int startSet = tree->getHeightData() - tree->getHeight() - 1;
     for(int i = 0;i<setPosTime;i++){
         //add wood on the left side tree
-        tree->setTrue(startSet+i,midPos-i);
+        tree->setTrue(startSet+i,tree->getPlantPos()-i);
         //add wood on the right side tree
-        tree->setTrue(startSet+i,midPos+i);
+        tree->setTrue(startSet+i,tree->getPlantPos()+i);
     }
     tree->getHeight()+=1;
     tree->getAge()+=1;
