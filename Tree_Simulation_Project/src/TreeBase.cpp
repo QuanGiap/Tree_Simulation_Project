@@ -1,7 +1,7 @@
 #include "TreeBase.h"
 #include <iostream>
 using namespace std;
-TreeBase::TreeBase(int pos,vector<vector<bool>>*& table){
+TreeBase::TreeBase(int pos,bool isWater,vector<vector<bool>>*& table){
     leafColor = "green";
     month = 0;
     width = 1;
@@ -10,19 +10,19 @@ TreeBase::TreeBase(int pos,vector<vector<bool>>*& table){
     (*data)[getHeightData()-1][pos] = true;
     (*data)[getHeightData()-2][pos] = true;
     plantPosition = pos;
-    leafPoint.push_back(getHeightData()-2);
-    leafPoint.push_back(pos);
+    this->isWater = isWater;
 }
 int TreeBase::getPlantPos() const{
     return plantPosition;
 }
 void TreeBase::setTrue(int i, int j){
-    (*data)[i][j] = true;
+    if(i>=0 && i<getHeightData() && j>=0 && j <getWidthData())
+        (*data)[i][j] = true;
 }
-int& TreeBase::getWidth(){
+int& TreeBase::setWidth(){
     return width;
 }
-int& TreeBase::getHeight(){
+int& TreeBase::setHeight(){
     return height;
 }
 int TreeBase::getWidthData() const{
@@ -31,14 +31,11 @@ int TreeBase::getWidthData() const{
 int TreeBase::getHeightData() const{
     return (*data).size();
 }
-vector<int>& TreeBase::getLeafLocate(){
-    return leafPoint;
-}
 bool TreeBase::isWood(int col, int row)const{
     if(row<0||col<0||row>=getWidthData()||col>=getHeightData()) return false;
     return (*data)[col][row];
 }
-int& TreeBase::getAge() {
+int& TreeBase::setAge() {
     return month;
 }
 string TreeBase::getLeafColor() const{

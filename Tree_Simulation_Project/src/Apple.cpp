@@ -1,5 +1,5 @@
 #include "Apple.h"
-Apple::Apple(int pos, vector<vector<bool>>*& table):TreeBase(pos,table){}
+Apple::Apple(int pos,bool isWater, vector<vector<bool>>*& table):TreeBase(pos,isWater,table){}
 
 int Apple::getGrownSpeed() const{
     return 10;

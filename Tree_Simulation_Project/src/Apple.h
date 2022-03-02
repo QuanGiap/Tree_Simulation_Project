@@ -3,7 +3,7 @@
 #include"TreeBase.h"
 class Apple:public TreeBase{
 public:
-    Apple(int pos, vector<vector<bool>>*& table);
+    Apple(int pos,bool isWater, vector<vector<bool>>*& table);
     virtual int getGrownSpeed()const override;
     virtual string getFruitColor() const override;
     virtual string getType() const override;

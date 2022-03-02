@@ -11,6 +11,7 @@ int const COLS_MAX = 50;
 int main(){
     srand (time(NULL));
     vector<vector<bool>> *data = new vector<vector<bool>>;
+    vector<TreeBaseBehavior*>* behavList = new vector<TreeBaseBehavior*>;
     for(int i = 0;i < ROW_MAX;i++){
         vector<bool> temp;
         for(int j = 0;j<COLS_MAX;j++){
@@ -18,16 +19,18 @@ int main(){
         }
         data->push_back(temp);
     }
-    TreeBase* test = new Lemon(10, data);
-    TreeBase* test2 = new Lemon(30,data);
+    TreeBase* test = new Lemon(10,false, data);
+    TreeBase* test2 = new Lemon(30,false, data);
     TreeBaseBehavior* test3 = new Sapling(*test);
     TreeBaseBehavior* test4 = new Sapling(*test2);
+    behavList->push_back(test3);
+    behavList->push_back(test4);
     char input ='a';
       while(input!= 'b'){
-        test3->update();
-        test4->update();
+        (*behavList)[0]->update();
+        (*behavList)[1]->update();
         cout<<*test;
-        cout<<test->getAge()<<endl;
+        cout<<test->setAge()<<endl;
         if(test3->isOld()) {
             test3 = test3->switchState();
         }

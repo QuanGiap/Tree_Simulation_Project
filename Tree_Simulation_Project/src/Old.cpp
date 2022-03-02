@@ -1,8 +1,11 @@
 #include "Old.h"
 
 Old::Old(TreeBase& tree):TreeBaseBehavior(tree){}
+void Old::update(){
+    grow(true);
+}
 bool Old::isOld(){
-    return getTreeBase().getAge()>50;
+    return getTreeBase().setAge()>50;
 }
 string Old::getType() const{
     return "Old";

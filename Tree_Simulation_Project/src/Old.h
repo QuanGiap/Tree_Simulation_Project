@@ -5,6 +5,7 @@
 class Old:public TreeBaseBehavior{
 public:
     Old(TreeBase& tree);
+    virtual void update() override;
     virtual string getType() const override;
     virtual bool isOld() override;
 };
