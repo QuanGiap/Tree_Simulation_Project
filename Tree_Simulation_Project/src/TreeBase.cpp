@@ -1,12 +1,12 @@
 #include "TreeBase.h"
 #include <iostream>
 using namespace std;
-TreeBase::TreeBase(int i, int j,vector<vector<bool>>& table){
+TreeBase::TreeBase(int i, int j,vector<vector<bool>>*& table){
     leafColor = "green";
     month = 0;
     width = 1;
     height = 2;
-    data = &table;
+    data = table;
     (*data)[i-1][j] = true;
     (*data)[i-2][j] = true;
     plantPosition = j;
@@ -26,7 +26,7 @@ int& TreeBase::getHeight(){
     return height;
 }
 int TreeBase::getWidthData() const{
-    return data[0].size();
+    return (*data)[0].size();
 }
 int TreeBase::getHeightData() const{
     return (*data).size();

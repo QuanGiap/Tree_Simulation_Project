@@ -5,7 +5,7 @@
 using namespace std;
 class TreeBase{
 public:
-  TreeBase(int i, int j, vector<vector<bool>>& table);
+  TreeBase(int i, int j, vector<vector<bool>>*& table);
   int& getAge();
   int getWidthData() const;
   int getHeightData() const;

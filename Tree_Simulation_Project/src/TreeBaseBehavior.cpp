@@ -10,7 +10,7 @@ bool TreeBaseBehavior::isOld(){
 }
 
 void TreeBaseBehavior::update(){
-    grow(rand()%4==0);
+    grow(rand()%2==0);
 }
 TreeBaseBehavior* TreeBaseBehavior::switchState(){
     return new TreeBaseBehavior(*tree);

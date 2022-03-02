@@ -1,6 +1,6 @@
 #include "Orange.h"
 
-Orange::Orange(int i, int j, vector<vector<bool>>& table):TreeBase(i,j,table){
+Orange::Orange(int i, int j, vector<vector<bool>>*& table):TreeBase(i,j,table){
 }
 
 int Orange::getGrownSpeed() const{
