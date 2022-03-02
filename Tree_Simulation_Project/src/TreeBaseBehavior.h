@@ -11,8 +11,10 @@ public:
     virtual void update();
     virtual bool isOld();
     virtual string getType() const;
+    void die();
 private:
     void growWidth();
     TreeBase* tree;
+    vector<vector<bool>> *data = new vector<vector<bool>>;
 };
 #endif

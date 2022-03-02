@@ -1,6 +1,6 @@
 #include "Lemon.h"
 
-Lemon::Lemon(int i, int j, vector<vector<bool>>*& table):TreeBase(i,j,table){
+Lemon::Lemon(int pos, vector<vector<bool>>*& table):TreeBase(pos,table){
 }
 
 int Lemon::getGrownSpeed() const{

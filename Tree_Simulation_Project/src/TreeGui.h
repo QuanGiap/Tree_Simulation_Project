@@ -7,9 +7,10 @@ using namespace sgl;
 class TreeGui
 {
 public:
-    TreeGui(int height, int width, TreeBaseBehavior& behavior);
+    TreeGui(int height, int width, vector<TreeBaseBehavior>& behavior,  vector<vector<bool>>*& table);
 private:
-    TreeBaseBehavior* behav;
+    vector<TreeBaseBehavior>* behav;
+    vector<vector<bool>>* table;
     GWindow* gwin;
     GButton* tickButton;
 };

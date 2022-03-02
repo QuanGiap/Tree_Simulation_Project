@@ -1,17 +1,17 @@
 #include "TreeBase.h"
 #include <iostream>
 using namespace std;
-TreeBase::TreeBase(int i, int j,vector<vector<bool>>*& table){
+TreeBase::TreeBase(int pos,vector<vector<bool>>*& table){
     leafColor = "green";
     month = 0;
     width = 1;
     height = 2;
     data = table;
-    (*data)[i-1][j] = true;
-    (*data)[i-2][j] = true;
-    plantPosition = j;
-    leafPoint.push_back(i-2);
-    leafPoint.push_back(j);
+    (*data)[getHeightData()-1][pos] = true;
+    (*data)[getHeightData()-2][pos] = true;
+    plantPosition = pos;
+    leafPoint.push_back(getHeightData()-2);
+    leafPoint.push_back(pos);
 }
 int TreeBase::getPlantPos() const{
     return plantPosition;

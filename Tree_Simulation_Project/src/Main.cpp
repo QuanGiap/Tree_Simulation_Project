@@ -18,8 +18,8 @@ int main(){
         }
         data->push_back(temp);
     }
-    TreeBase* test = new Lemon(25,10, data);
-    TreeBase* test2 = new Lemon(25,30,data);
+    TreeBase* test = new Lemon(10, data);
+    TreeBase* test2 = new Lemon(30,data);
     TreeBaseBehavior* test3 = new Sapling(*test);
     TreeBaseBehavior* test4 = new Sapling(*test2);
     char input ='a';
