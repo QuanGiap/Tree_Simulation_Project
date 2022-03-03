@@ -1,0 +1,312 @@
+[
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\StarterProject_autogen\\mocs_compilation.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\build\\StarterProject_autogen\\mocs_compilation.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build/StarterProject_autogen/mocs_compilation.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\console.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\console.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/console.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gbrowserpane.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gbrowserpane.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gbrowserpane.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gbutton.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gbutton.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gbutton.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gcanvas.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gcanvas.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gcanvas.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gcheckbox.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gcheckbox.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gcheckbox.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gchooser.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gchooser.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gchooser.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gclipboard.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gclipboard.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gclipboard.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gcolor.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gcolor.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gcolor.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gcolorchooser.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gcolorchooser.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gcolorchooser.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gconsolewindow.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gconsolewindow.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gconsolewindow.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gcontainer.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gcontainer.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gcontainer.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gdiffgui.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gdiffgui.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gdiffgui.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gdiffimage.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gdiffimage.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gdiffimage.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gdownloader.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gdownloader.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gdownloader.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gdrawingsurface.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gdrawingsurface.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gdrawingsurface.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gevent.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gevent.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gevent.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\geventqueue.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\geventqueue.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/geventqueue.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gexceptions.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gexceptions.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gexceptions.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gfilechooser.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gfilechooser.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gfilechooser.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gfont.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gfont.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gfont.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gfontchooser.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gfontchooser.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gfontchooser.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\ginit.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\ginit.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/ginit.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\ginteractor.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\ginteractor.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/ginteractor.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\glabel.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\glabel.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/glabel.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\glayout.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\glayout.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/glayout.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gmath.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gmath.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gmath.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gobjects.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gobjects.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gobjects.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gobservable.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gobservable.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gobservable.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\goptionpane.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\goptionpane.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/goptionpane.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gradiobutton.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gradiobutton.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gradiobutton.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gscrollbar.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gscrollbar.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gscrollbar.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gscrollpane.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gscrollpane.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gscrollpane.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gslider.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gslider.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gslider.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gsound.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gsound.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gsound.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gspacer.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gspacer.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gspacer.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gtable.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gtable.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gtable.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gtextarea.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gtextarea.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gtextarea.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gtextfield.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gtextfield.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gtextfield.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gthread.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gthread.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gthread.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gtimer.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gtimer.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gtimer.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gtypes.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gtypes.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gtypes.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gversion.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gversion.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gversion.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\gwindow.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\gwindow.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gwindow.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\librarymain.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\librarymain.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/librarymain.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\mainwrapper.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\mainwrapper.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/mainwrapper.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\privatediff.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\privatediff.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/privatediff.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\privatefilelib.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\privatefilelib.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/privatefilelib.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\privateregexpr.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\privateregexpr.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/privateregexpr.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\privatestrlib.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\privatestrlib.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/privatestrlib.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\qtgui.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\qtgui.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/qtgui.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\lib\\require.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\lib\\require.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/require.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\src\\Adult.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\src\\Adult.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/src/Adult.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\src\\Apple.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\src\\Apple.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/src/Apple.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\src\\Lemon.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\src\\Lemon.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/src/Lemon.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\src\\Main.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\src\\Main.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/src/Main.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\src\\Old.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\src\\Old.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/src/Old.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\src\\Orange.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\src\\Orange.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/src/Orange.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\src\\Sapling.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\src\\Sapling.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/src/Sapling.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\src\\TreeBase.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\src\\TreeBase.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/src/TreeBase.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\src\\TreeBaseBehavior.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\src\\TreeBaseBehavior.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/src/TreeBaseBehavior.cpp"
+},
+{
+  "directory": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB @CMakeFiles/StarterProject.dir/includes_CXX.rsp -g -g -Wall -Wextra -Werror=return-type -Werror=uninitialized -Wunused-parameter -Wmissing-field-initializers -Wno-old-style-cast -Wno-sign-compare -Wno-sign-conversion -DSGL_GRAPHICAL_CONSOLE_NO_TOOLBAR=1 -Dmain=qMain -DqMain=studentMain -std=gnu++11 -o CMakeFiles\\StarterProject.dir\\src\\TreeGui.cpp.obj -c C:\\Users\\Yeet\\Desktop\\tree\\Tree_Simulation_Project\\Tree_Simulation_Project\\src\\TreeGui.cpp",
+  "file": "C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/src/TreeGui.cpp"
+}
+]
