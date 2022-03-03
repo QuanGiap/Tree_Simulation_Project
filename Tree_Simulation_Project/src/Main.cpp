@@ -8,6 +8,9 @@
 using namespace std;
 int const ROW_MAX = 25;
 int const COLS_MAX = 50;
+//The main function only need to construct The GUI and run it.
+//This is beta version so it gonna need to construct the tree
+//and vector behavior and output the picture of 2 tree.
 int main(){
     srand (time(NULL));
     vector<vector<bool>> *data = new vector<vector<bool>>;
