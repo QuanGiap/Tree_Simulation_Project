@@ -8,7 +8,6 @@
 #define TREEGUI_H
 #include "TreeBaseBehavior.h"
 #include "gwindow.h"
-#include "gbutton.h"
 using namespace sgl;
 class TreeGui
 {
@@ -21,8 +20,8 @@ public:
 private:
     vector<TreeBaseBehavior*>* behavList;
     vector<vector<bool>>* table;
+    int gridSize;
     GWindow* gwin;
-    GButton* tickButton;
 };
 
 #endif // TREEGUI_H

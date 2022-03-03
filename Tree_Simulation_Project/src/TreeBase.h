@@ -20,9 +20,9 @@ public:
   // The setAge member function returns the address of the TreeBase's private
   // month variable so it can be altered outside of the class.
   int& setAge();
-  // The getWidthData member function returns the width of the TreeBase.
+  // The getWidthData member function returns the length of first index of vector data
   int getWidthData() const;
-  // The getHeightData member function returns the height of the TreeBase.
+  // The getHeightData member function returns the the length of vector data
   int getHeightData() const;
   // The setHeight member function returns the address of the TreeBase's private
   // height variable so it can be altered outside of the class.
@@ -30,12 +30,14 @@ public:
   // The setWidth member function returns the address of the TreeBase's private
   // Width variable so it can be altered outside of the class.
   int& setWidth();
+  //Check if this tree is in the way of other tree
+  bool isInTheWay(TreeBase& other);
   // The isWood member function accepts two integers representing the row and
   // column of the table and returns whether or not there is a peice of the
   // tree at that point.
   bool isWood(int col,int row)const;
   // The getPlantPos member function returns an integer of the tree's
-  // horizontal position at it's center.
+  // horizontal position at it's center of the tree.
   int getPlantPos()const;
   // The setTrue member function accepts two integers representing the row and
   // column of the table and sets that point equal to true, displaying a peice
@@ -44,9 +46,9 @@ public:
   // The getLeafColor member function returns the private string leafColor that
   // represents the color of leaves the TreeBase has.
   string getLeafColor() const;
-  // The setLeafColor member function accepts a string of the desired color and
+  // The setLeafColor member function accepts a reference string of the desired color and
   // sets the private string leafColor to the given string.
-  void setLeafColor(const string color);
+  void setLeafColor(const string& color);
   // The getGrownSpeed member function returns the integer representing how 
   // quickly the tree will grow each tick.
   virtual int getGrownSpeed() const;

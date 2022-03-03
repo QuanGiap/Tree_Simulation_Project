@@ -38,13 +38,16 @@ bool TreeBase::isWood(int col, int row)const{
     if(row<0||col<0||row>=getWidthData()||col>=getHeightData()) return false;
     return (*data)[col][row];
 }
+bool TreeBase::isInTheWay(TreeBase &other){
+    return (plantPosition+(width/2)) >= (other.getPlantPos()-other.setWidth()/2);
+}
 int& TreeBase::setAge() {
     return month;
 }
 string TreeBase::getLeafColor() const{
     return leafColor;
 }
-void TreeBase::setLeafColor(const string color){
+void TreeBase::setLeafColor(const string& color){
     leafColor = color;
 }
 int TreeBase::getGrownSpeed() const{

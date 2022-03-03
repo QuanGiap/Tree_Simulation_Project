@@ -5,6 +5,6 @@
 
 TreeGui::TreeGui(int height, int width,vector<TreeBaseBehavior*>*& behaviorList,  vector<vector<bool>>*& table)
 {
-   this->table = table;
+    this->table = table;
     behavList = behaviorList;
 }

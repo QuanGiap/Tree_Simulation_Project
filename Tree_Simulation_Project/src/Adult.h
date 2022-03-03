@@ -11,10 +11,15 @@
 class Adult : public TreeBaseBehavior{
 public:
     Adult(TreeBase& tree);
+    //calling the grow function. Grow height 2 time and width 1 time in order
     virtual void update() override;
+    //update giving fruit position in vector position form from TreeBase datab (not write yet)
     virtual void giveFruit();
+    //Return new TreeBaseBehavior* of "Old" state
     virtual TreeBaseBehavior* switchState()override;
+    //check if the age reach requirement to switch state
     virtual bool isOld()override;
+    //Return string Adult
     virtual string getType() const override;
 private:
     int count;

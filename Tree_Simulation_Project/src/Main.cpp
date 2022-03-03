@@ -16,7 +16,7 @@ int main(){
         vector<bool> temp;
         for(int j = 0;j<COLS_MAX;j++){
             temp.push_back(false);
-        }
+        };
         data->push_back(temp);
     }
     TreeBase* test = new Lemon(10,false, data);
@@ -31,6 +31,8 @@ int main(){
         (*behavList)[1]->update();
         cout<<*test;
         cout<<test->setAge()<<endl;
+        cout<<test->setWidth()<<endl;
+        cout<<test->setHeight()<<endl;
         if(test3->isOld()) {
             test3 = test3->switchState();
         }

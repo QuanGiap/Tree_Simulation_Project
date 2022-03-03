@@ -12,8 +12,11 @@
 class Old:public TreeBaseBehavior{
 public:
     Old(TreeBase& tree);
+    //calling the grow function. Grow width every time it call
     virtual void update() override;
+    //Return "Old"
     virtual string getType() const override;
+    //Check if tree is old enough to die
     virtual bool isOld() override;
 };
 
