@@ -35,6 +35,7 @@ public:
   int& setWidth();
   //Check if this tree is in the way of other tree
   bool isInTheWay(TreeBase& other);
+  //Check if the position going to plant is in the way of this tree
   bool isInTheWay(int plantLocation);
   // The isWood member function accepts two integers representing the row and
   // column of the table and returns whether or not there is a peice of the
