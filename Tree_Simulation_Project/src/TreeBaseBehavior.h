@@ -22,8 +22,6 @@ public:
     // not the tree is meant to grow and will add one to the tree's height if
     // the value is false and one to the width if it's true.
     void grow(bool isGrowW);
-    //return true if the tree is dead
-    bool isDie();
     // The isWood member function accepts two integers representing the row and
     // column of the table and returns whether or not there is a peice of the
     // tree at that point. 
@@ -48,7 +46,6 @@ private:
     // current tree all the way up to one less of the previous layer.
     void growWidth();
     TreeBase* tree;
-    bool isDead;
     vector<vector<bool>> *data = new vector<vector<bool>>;
 };
 #endif

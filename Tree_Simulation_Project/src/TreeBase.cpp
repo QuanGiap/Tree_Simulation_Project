@@ -10,6 +10,7 @@ TreeBase::TreeBase(int pos,bool isWater,vector<vector<bool>>*& table){
     width = 1;
     height = 2;
     data = table;
+    isDead = false;
     (*data)[getHeightData()-1][pos] = true;
     (*data)[getHeightData()-2][pos] = true;
     plantPosition = pos;
@@ -34,12 +35,23 @@ int TreeBase::getWidthData() const{
 int TreeBase::getHeightData() const{
     return (*data).size();
 }
+vector<int>& TreeBase::setFruitLocate(){
+    return fruitLocation;
+}
 bool TreeBase::isWood(int col, int row)const{
     if(row<0||col<0||row>=getWidthData()||col>=getHeightData()) return false;
     return (*data)[col][row];
 }
 bool TreeBase::isInTheWay(TreeBase &other){
     return (plantPosition+(width/2)) >= (other.getPlantPos()-other.setWidth()/2);
+}
+bool TreeBase::isInTheWay(int plantLocation){
+    int areaRight = width/2 + plantPosition;
+    int areaLeft = width/2 - plantPosition;
+    return (plantLocation>areaRight) || (plantLocation<areaLeft);
+}
+bool& TreeBase::setDead(){
+    return isDead;
 }
 int& TreeBase::setAge() {
     return month;

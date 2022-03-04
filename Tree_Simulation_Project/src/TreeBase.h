@@ -24,6 +24,9 @@ public:
   int getWidthData() const;
   // The getHeightData member function returns the the length of vector data
   int getHeightData() const;
+  // The getPlantPos member function returns an integer of the tree's
+  // horizontal position at it's center of the tree.
+  int getPlantPos()const;
   // The setHeight member function returns the address of the TreeBase's private
   // height variable so it can be altered outside of the class.
   int& setHeight();
@@ -32,13 +35,15 @@ public:
   int& setWidth();
   //Check if this tree is in the way of other tree
   bool isInTheWay(TreeBase& other);
+  bool isInTheWay(int plantLocation);
   // The isWood member function accepts two integers representing the row and
   // column of the table and returns whether or not there is a peice of the
   // tree at that point.
   bool isWood(int col,int row)const;
-  // The getPlantPos member function returns an integer of the tree's
-  // horizontal position at it's center of the tree.
-  int getPlantPos()const;
+  //Return bool check if the tree is dead, can modifed;
+  bool& setDead();
+  //return vector location of the fruit, also can modified;
+  vector<int>& setFruitLocate();
   // The setTrue member function accepts two integers representing the row and
   // column of the table and sets that point equal to true, displaying a peice
   // of tree at that point.
@@ -63,6 +68,7 @@ public:
 private:
   string leafColor;
   bool isWater;
+  bool isDead;
   vector<vector<bool>>* data;
   vector<int> fruitLocation;
   int plantPosition;

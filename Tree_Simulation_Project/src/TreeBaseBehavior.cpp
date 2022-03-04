@@ -11,9 +11,6 @@ bool TreeBaseBehavior::isWood(int i, int j){
 bool TreeBaseBehavior::isOld(){
     return tree->setAge() > 0;
 }
-bool TreeBaseBehavior::isDie(){
-    return isDead;
-}
 void TreeBaseBehavior::update(){
     grow(rand()%2==0);
 }
@@ -32,7 +29,7 @@ void TreeBaseBehavior::growWidth(){
     tree->setWidth()+=2;
 }
 void TreeBaseBehavior::die(){
-    isDead = true;
+    tree->setDead()=true;
 }
 void TreeBaseBehavior::grow(bool isGrowW){
     if(isGrowW) growWidth();
