@@ -46,8 +46,8 @@ bool TreeBase::isInTheWay(TreeBase &other){
     return (plantPosition+(width/2)) >= (other.getPlantPos()-other.setWidth()/2);
 }
 bool TreeBase::isInTheWay(int plantLocation){
-    int areaRight = width/2 + plantPosition;
-    int areaLeft = width/2 - plantPosition;
+    int areaRight = plantPosition + width/2;
+    int areaLeft = plantPosition - width/2;
     return (plantLocation>areaRight) || (plantLocation<areaLeft);
 }
 bool& TreeBase::setDead(){
