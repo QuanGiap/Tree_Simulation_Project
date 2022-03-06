@@ -9,6 +9,7 @@
 using namespace std;
 int const ROW_MAX = 25;
 int const COLS_MAX = 50;
+
 //The main function only need to construct The GUI and run it.
 //This is beta version so it gonna need to construct the tree
 //and vector behavior and output the picture of 2 tree.
@@ -34,9 +35,8 @@ int main(){
     cout << "Animate trees? y/n ";
     cin >> animateinput;
     if(animateinput == 'y') {
-      TreeGui treeScape = TreeGui(1440, 900, behavList, data);
+      TreeGui treeScape = TreeGui(ROW_MAX, COLS_MAX, behavList, data);
     }
-    //
     char input ='a';
       while(input!= 'b'){
         (*behavList)[0]->update();

@@ -11,8 +11,8 @@ TreeBase::TreeBase(int pos,bool isWater,vector<vector<bool>>*& table){
     height = 2;
     data = table;
     isDead = false;
-    (*data)[getHeightData()-1][pos] = true;
-    (*data)[getHeightData()-2][pos] = true;
+    (*data)[getHeightData()-1][pos-1] = true;
+    (*data)[getHeightData()-2][pos-1] = true;
     plantPosition = pos;
     this->isWater = isWater;
 }
@@ -49,6 +49,15 @@ bool TreeBase::isInTheWay(int plantLocation){
     int areaRight = plantPosition + width/2;
     int areaLeft = plantPosition - width/2;
     return (plantLocation>areaRight) || (plantLocation<areaLeft);
+}
+bool TreeBase::canGrow(){
+    int amount = isWater? getGrownSpeed() : getGrownSpeed()/2;
+    AmountToGrown += amount;
+    if(AmountToGrown>100){
+        AmountToGrown = 0;
+        return true;
+    }
+    return false;
 }
 bool& TreeBase::setDead(){
     return isDead;

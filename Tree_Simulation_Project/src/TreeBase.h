@@ -29,11 +29,12 @@ public:
   int getPlantPos()const;
   // The setHeight member function returns the address of the TreeBase's private
   // height variable so it can be altered outside of the class.
+  //height is the peak of the tree.
   int& setHeight();
   // The setWidth member function returns the address of the TreeBase's private
   // Width variable so it can be altered outside of the class.
   int& setWidth();
-  //Check if this tree is in the way of other tree
+  //Check if this tree is in the way of other tree. From left to right;
   bool isInTheWay(TreeBase& other);
   //Check if the position going to plant is in the way of this tree
   bool isInTheWay(int plantLocation);
@@ -43,6 +44,9 @@ public:
   bool isWood(int col,int row)const;
   //Return bool check if the tree is dead, can modifed;
   bool& setDead();
+  //check if the amount reach more than 100. Every time this function get called
+  //the amount if plus the grown speed. If it is not watered, grow speed is reduce by half
+  bool canGrow();
   //return vector location of the fruit, also can modified;
   vector<int>& setFruitLocate();
   // The setTrue member function accepts two integers representing the row and
@@ -70,6 +74,8 @@ private:
   string leafColor;
   bool isWater;
   bool isDead;
+  //the amount is enough to grow. Speed is based on grown speed sum
+  int AmountToGrown;
   vector<vector<bool>>* data;
   vector<int> fruitLocation;
   int plantPosition;
