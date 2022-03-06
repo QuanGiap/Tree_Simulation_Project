@@ -1,3 +1,6 @@
 {
-    "cmake.sourceDirectory": "${workspaceFolder}/Tree_Simulation_Project"
+    "cmake.sourceDirectory": "${workspaceFolder}/Tree_Simulation_Project",
+    "files.associations": {
+        "iostream": "cpp"
+    }
 }

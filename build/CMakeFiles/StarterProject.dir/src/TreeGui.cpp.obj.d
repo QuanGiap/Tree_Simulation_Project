@@ -334,8 +334,4 @@ CMakeFiles/StarterProject.dir/src/TreeGui.cpp.obj: \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/deque.tcc \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_queue.h \
  C:/Qt/5.15.2/mingw81_64/include/QtCore/QObject \
- C:/Qt/5.15.2/mingw81_64/include/QtCore/qobject.h \
- C:/Users/Yeet/Desktop/tree/Tree_Simulation_Project/Tree_Simulation_Project/lib/gbutton.h \
- C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QToolButton \
- C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qtoolbutton.h \
- C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qabstractbutton.h
+ C:/Qt/5.15.2/mingw81_64/include/QtCore/qobject.h

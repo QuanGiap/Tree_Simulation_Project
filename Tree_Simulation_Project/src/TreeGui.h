@@ -17,6 +17,7 @@ public:
     // their behaviors, and a reference to a 2d vector representing the growing
     // space of the trees.
     TreeGui(int height, int width, vector<TreeBaseBehavior*>*& behavior,  vector<vector<bool>>*& table);
+    void updateAll();
 private:
     vector<TreeBaseBehavior*>* behavList;
     vector<vector<bool>>* table;

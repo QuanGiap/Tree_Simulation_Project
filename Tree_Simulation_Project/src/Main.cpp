@@ -1,5 +1,6 @@
 #include <iostream>
 #include <console.h>
+#include "TreeGui.h"
 #include "Lemon.h"
 #include "Apple.h"
 #include "Orange.h"
@@ -28,6 +29,14 @@ int main(){
     TreeBaseBehavior* test4 = new Sapling(*test2);
     behavList->push_back(test3);
     behavList->push_back(test4);
+    //
+    char animateinput = 'n';
+    cout << "Animate trees? y/n ";
+    cin >> animateinput;
+    if(animateinput == 'y') {
+      TreeGui treeScape = TreeGui(1440, 900, behavList, data);
+    }
+    //
     char input ='a';
       while(input!= 'b'){
         (*behavList)[0]->update();
