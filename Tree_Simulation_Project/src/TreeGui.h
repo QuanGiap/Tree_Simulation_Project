@@ -19,6 +19,8 @@ public:
     TreeGui(int height, int width, vector<TreeBaseBehavior*>*& behavior,  vector<vector<bool>>*& table);
     void updateAll();
 private:
+    void updateTree();
+    void draw();
     vector<TreeBaseBehavior*>* behavList;
     vector<vector<bool>>* table;
     int gridSize;

@@ -4,7 +4,7 @@
 // The purpose of this program is to create a class called Old that gives the
 // editor a constructor and functions inherited from TreeBaseBehavior that have
 // been overriden to better simulate an old tree's behavior.
-
+// Grow in this Behaviour is always width;
 #ifndef OLD_H
 #define OLD_H
 #include "TreeBaseBehavior.h"
@@ -12,8 +12,6 @@
 class Old:public TreeBaseBehavior{
 public:
     Old(TreeBase& tree);
-    //calling the grow function. Grow width every time it call
-    virtual void update() override;
     //Return "Old"
     virtual string getType() const override;
     //Check if tree is old enough to die

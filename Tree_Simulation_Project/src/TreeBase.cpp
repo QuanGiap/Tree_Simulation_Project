@@ -23,11 +23,17 @@ void TreeBase::setTrue(int i, int j){
     if(i>=0 && i<getHeightData() && j>=0 && j <getWidthData())
         (*data)[i][j] = true;
 }
-int& TreeBase::setWidth(){
+int TreeBase::getWidth(){
     return width;
 }
-int& TreeBase::setHeight(){
+void TreeBase::setWidth(int width){
+    this->width = width;
+}
+int TreeBase::getHeight(){
     return height;
+}
+void TreeBase::setHeight(int height){
+    this->height = height;
 }
 int TreeBase::getWidthData() const{
     return (*data)[0].size();
@@ -43,7 +49,7 @@ bool TreeBase::isWood(int col, int row)const{
     return (*data)[col][row];
 }
 bool TreeBase::isInTheWay(TreeBase &other){
-    return (plantPosition+(width/2)) >= (other.getPlantPos()-other.setWidth()/2);
+    return (plantPosition+(width/2)) >= (other.getPlantPos()-other.getWidth()/2);
 }
 bool TreeBase::isInTheWay(int plantLocation){
     int areaRight = plantPosition + width/2;
@@ -59,11 +65,17 @@ bool TreeBase::canGrow(){
     }
     return false;
 }
-bool& TreeBase::setDead(){
+bool TreeBase::getDead(){
     return isDead;
 }
-int& TreeBase::setAge() {
+void TreeBase::setDead(bool isDead){
+    this->isDead = isDead;
+}
+int TreeBase::getAge() {
     return month;
+}
+void TreeBase::setAge(int age){
+    month = age;
 }
 string TreeBase::getLeafColor() const{
     return leafColor;

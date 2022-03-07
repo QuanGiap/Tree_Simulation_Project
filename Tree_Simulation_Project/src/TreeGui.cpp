@@ -16,9 +16,15 @@ TreeGui::TreeGui(int height, int width, vector<TreeBaseBehavior*>*& behaviorList
 void TreeGui::updateAll() {
     gwin->clear();
     gwin->toFront();
+    updateTree();
+    draw();
+}
+void TreeGui::updateTree(){
     for(int i = 0; i < (*behavList).size(); i++) {
         (*behavList)[i]->update();
     }
+}
+void TreeGui::draw(){
     gwin->setColor("brown");
     gwin->setFillColor("brown");
     for(int j = 0; j < (*table).size(); j++) {
@@ -31,10 +37,10 @@ void TreeGui::updateAll() {
     gwin->setColor("green");
     gwin->setFillColor("green");
     for(int i = 0; i < (*behavList).size(); i++) {
-        int wid = (*behavList)[i]->getTreeBase().setWidth()*25;
-        int hei = (*behavList)[i]->getTreeBase().setHeight()*10;
+        int wid = (*behavList)[i]->getTreeBase().getWidth()*GRID_SIZE*3;
+        int hei = (*behavList)[i]->getTreeBase().getHeight()*GRID_SIZE;
         int x = (((*behavList)[i]->getTreeBase().getPlantPos())*GRID_SIZE)-GRID_SIZE/2;
-        int y = ((*behavList)[i]->getTreeBase().getHeightData() - (*behavList)[i]->getTreeBase().setHeight())*GRID_SIZE;
+        int y = ((*behavList)[i]->getTreeBase().getHeightData() - (*behavList)[i]->getTreeBase().getHeight())*GRID_SIZE;
         GOval oval(0,0,wid,hei);
         oval.setCenterX(x);
         oval.setCenterY(y);

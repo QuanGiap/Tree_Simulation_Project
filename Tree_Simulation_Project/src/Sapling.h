@@ -4,6 +4,7 @@
 // The purpose of this program is to create a class called Sapling that gives
 // the editor a constructor and functions inherited from TreeBaseBehavior that
 // have been overriden to better simulate a Sapling's behavior.
+// Grow in this Behaviour is 5 height : 1 width
 
 #ifndef SAPLING_H
 #define SAPLING_H
@@ -13,10 +14,6 @@ public:
     // The Sapling constructor accepts a reference to a TreeBase and 
     // initializes the private count variable for the new tree at zero.
     Sapling(TreeBase& tree);
-    // The update member function calls the grow member function with true once
-    // every 5 counts and false the rest of the time, so the tree will grow 
-    // width-wise once every 5 turns, growing height-wise the rest of those 5.
-    virtual void update() override;
     // The switchState member function returns a new Adult TreeBaseBehavior 
     // pointer to take the place of this Sapling TreeBaseBehavior.
     virtual TreeBaseBehavior* switchState() override;
@@ -26,8 +23,6 @@ public:
     // The getType member function returns a string representing the stage of
     // the tree is at so it may be identified easily. Returns "Sapling."
     virtual string getType() const override;
-private:
-    int count;
 };
 
 #endif // SAPLING_H

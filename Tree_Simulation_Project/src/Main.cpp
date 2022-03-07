@@ -35,16 +35,16 @@ int main(){
     cout << "Animate trees? y/n ";
     cin >> animateinput;
     if(animateinput == 'y') {
-      TreeGui treeScape = TreeGui(ROW_MAX, COLS_MAX, behavList, data);
+      TreeGui treeScape(ROW_MAX, COLS_MAX, behavList, data);
     }
     char input ='a';
       while(input!= 'b'){
         (*behavList)[0]->update();
         (*behavList)[1]->update();
         cout<<*test;
-        cout<<test->setAge()<<endl;
-        cout<<test->setWidth()<<endl;
-        cout<<test->setHeight()<<endl;
+        cout<<test3->getRatio()<<endl;
+        cout<<test->getWidth()<<endl;
+        cout<<test->getHeight()<<endl;
         if(test3->isOld()) {
             test3 = test3->switchState();
         }

@@ -4,47 +4,56 @@
 #include "TreeBaseBehavior.h"
 TreeBaseBehavior::TreeBaseBehavior(TreeBase& tree){
     this->tree = &tree;
+    ratio = 1;
+    count = 0;
 }
 bool TreeBaseBehavior::isWood(int i, int j){
     return tree->isWood(i,j);
 }
 bool TreeBaseBehavior::isOld(){
-    return tree->setAge() > 0;
+    return tree->getAge() > 0;
 }
 void TreeBaseBehavior::update(){
-    grow(rand()%2==0);
+    count=(count+1)%ratio;
+    grow(count==0);
+}
+void TreeBaseBehavior::setRatio(int ratio){
+    this->ratio = ratio;
 }
 TreeBaseBehavior* TreeBaseBehavior::switchState(){
     return new TreeBaseBehavior(*tree);
 }
+int TreeBaseBehavior::getRatio(){
+    return ratio;
+}
 void TreeBaseBehavior::growWidth(){
-    int offSet = 1+(tree->setWidth()/2);
-    int startSet = tree->setHeight() - tree->setWidth()+(tree->setWidth()/2);
+    int offSet = 1+(tree->getWidth()/2);
+    int startSet = tree->getHeight() - tree->getWidth()+(tree->getWidth()/2);
     for(int i = startSet;i >=0;i--){
         //add wood on the left side tree
         tree->setTrue(tree->getHeightData()-i-1,tree->getPlantPos()-offSet-1);
         //add wood in the right side tree
         tree->setTrue(tree->getHeightData()-i-1,tree->getPlantPos()+offSet-1);
     }
-    tree->setWidth()+=2;
+    tree->setWidth(tree->getWidth()+2);
 }
 void TreeBaseBehavior::die(){
-    tree->setDead()=true;
+    tree->setDead(true);
 }
 void TreeBaseBehavior::grow(bool isGrowW){
     if(isGrowW) growWidth();
     else{
-        int setPosTime = tree->setWidth()/2+1;
-        int startSet = tree->getHeightData() - tree->setHeight() - 1;
+        int setPosTime = tree->getWidth()/2+1;
+        int startSet = tree->getHeightData() - tree->getHeight() - 1;
         for(int i = 0;i<setPosTime;i++){
             //add wood on the left side tree
             tree->setTrue(startSet+i,tree->getPlantPos()-i-1);
             //add wood on the right side tree
             tree->setTrue(startSet+i,tree->getPlantPos()+i-1);
         }
-        tree->setHeight()+=1;
+        tree->setHeight(tree->getHeight()+1);
     }
-    tree->setAge()+=1;
+    tree->setAge(tree->getAge()+1);
 }
 TreeBase& TreeBaseBehavior::getTreeBase(){
     return *tree;

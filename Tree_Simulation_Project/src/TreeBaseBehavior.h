@@ -18,6 +18,8 @@ public:
     TreeBase& getTreeBase();
     // The die member function stops the growth of the tree.
     void die();
+    //setting ratio for the tree. Count
+    void setRatio(int ratio);
     // The grow member function accepts a bool value representing whether or
     // not the tree is meant to grow and will add one to the tree's height if
     // the value is false and one to the width if it's true.
@@ -40,6 +42,7 @@ public:
     // The getType member function returns a string representing the stage of
     // the tree. In this case it returns "Base behavior."
     virtual string getType() const;
+    int getRatio();
 
 private:
     // The private growWidth member function adds wood to each side of the 
@@ -47,5 +50,7 @@ private:
     void growWidth();
     TreeBase* tree;
     vector<vector<bool>> *data = new vector<vector<bool>>;
+    int count;
+    int ratio;
 };
 #endif

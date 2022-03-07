@@ -4,6 +4,7 @@
 // The purpose of this program is to create a class called Adult that gives the
 // editor a constructor and functions inherited from TreeBaseBehavior that have
 // been overriden to better simulate an adult tree's behavior.
+// Grow in this Behaviour is 2 height : 1 width
 
 #ifndef ADULT_H
 #define ADULT_H
@@ -11,8 +12,6 @@
 class Adult : public TreeBaseBehavior{
 public:
     Adult(TreeBase& tree);
-    //calling the grow function. Grow height 2 time and width 1 time in order
-    virtual void update() override;
     //update giving fruit position in vector position form from TreeBase datab (not write yet)
     virtual void giveFruit();
     //Return new TreeBaseBehavior* of "Old" state
@@ -21,8 +20,6 @@ public:
     virtual bool isOld()override;
     //Return string Adult
     virtual string getType() const override;
-private:
-    int count;
 };
 
 #endif // ADULT_H

@@ -17,9 +17,10 @@ public:
   // position, a boolean of if it's being watered, and a reference to the 2d 
   // vector it will grow in.
   TreeBase(int pos,bool isWater, vector<vector<bool>>*& table);
-  // The setAge member function returns the address of the TreeBase's private
-  // month variable so it can be altered outside of the class.
-  int& setAge();
+  // The getAge member function returns the age of treeBase;
+  int getAge();
+  // setting the age from tree base
+  void setAge(int age);
   // The getWidthData member function returns the length of first index of vector data
   int getWidthData() const;
   // The getHeightData member function returns the the length of vector data
@@ -27,13 +28,14 @@ public:
   // The getPlantPos member function returns an integer of the tree's
   // horizontal position at it's center of the tree.
   int getPlantPos()const;
-  // The setHeight member function returns the address of the TreeBase's private
-  // height variable so it can be altered outside of the class.
-  //height is the peak of the tree.
-  int& setHeight();
-  // The setWidth member function returns the address of the TreeBase's private
-  // Width variable so it can be altered outside of the class.
-  int& setWidth();
+  // The getHeight member function returns the height of tree base
+  int getHeight();
+  // The setHeight member function setting the height of tree base
+  void setHeight(int height);
+  // The getWidth member function returns the width of tree base
+  int getWidth();
+  // The setWidth member function setting the width of tree base
+  void setWidth(int width);
   //Check if this tree is in the way of other tree. From left to right;
   bool isInTheWay(TreeBase& other);
   //Check if the position going to plant is in the way of this tree
@@ -42,8 +44,10 @@ public:
   // column of the table and returns whether or not there is a peice of the
   // tree at that point.
   bool isWood(int col,int row)const;
-  //Return bool check if the tree is dead, can modifed;
-  bool& setDead();
+  //Return bool check if the tree is dead;
+  bool getDead();
+  //Setting the tree bool base on param given
+  void setDead(bool isDead);
   //check if the amount reach more than 100. Every time this function get called
   //the amount if plus the grown speed. If it is not watered, grow speed is reduce by half
   bool canGrow();

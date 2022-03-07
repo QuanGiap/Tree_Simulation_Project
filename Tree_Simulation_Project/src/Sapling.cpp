@@ -5,14 +5,10 @@
 #include "Adult.h"
 
 Sapling::Sapling(TreeBase& tree):TreeBaseBehavior(tree){
-    count=0;
-}
-void Sapling::update(){
-    count=(count+1)%5;
-    grow(count==0);
+    setRatio(6);
 }
 bool Sapling::isOld(){
-    return getTreeBase().setAge() > 5;
+    return getTreeBase().getAge() > 5;
 }
 string Sapling::getType() const{
     return "Sapling";
