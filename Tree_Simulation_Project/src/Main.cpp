@@ -47,6 +47,7 @@ int main(){
         cout<<test->getHeight()<<endl;
         if(test3->isOld()) {
             test3 = test3->switchState();
+            (*behavList)[0] = test3;
         }
         cout<<test3->getType()<<endl;
         cin>>input;

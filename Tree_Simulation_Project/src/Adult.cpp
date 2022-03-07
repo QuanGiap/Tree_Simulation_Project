@@ -4,7 +4,7 @@
 #include "Adult.h"
 #include "Old.h"
 Adult::Adult(TreeBase& tree):TreeBaseBehavior(tree){
-    setRatio(2);
+    setRatio(3);
 }
 void Adult::giveFruit(){
 

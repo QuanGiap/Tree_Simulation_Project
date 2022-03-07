@@ -5,7 +5,7 @@
 #include <iostream>
 TreeBaseBehavior::TreeBaseBehavior(TreeBase& tree){
     this->tree = &tree;
-    ratio = 1;
+    ratio = 2;
     count = 0;
 }
 bool TreeBaseBehavior::isWood(int i, int j){
