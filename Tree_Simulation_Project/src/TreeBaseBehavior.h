@@ -42,8 +42,6 @@ public:
     // The getType member function returns a string representing the stage of
     // the tree. In this case it returns "Base behavior."
     virtual string getType() const;
-    int getRatio();
-
 private:
     // The private growWidth member function adds wood to each side of the 
     // current tree all the way up to one less of the previous layer.

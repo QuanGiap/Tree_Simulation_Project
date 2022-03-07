@@ -23,9 +23,6 @@ void TreeBaseBehavior::setRatio(int ratio){
 TreeBaseBehavior* TreeBaseBehavior::switchState(){
     return new TreeBaseBehavior(*tree);
 }
-int TreeBaseBehavior::getRatio(){
-    return ratio;
-}
 void TreeBaseBehavior::growWidth(){
     int offSet = 1+(tree->getWidth()/2);
     int startSet = tree->getHeight() - tree->getWidth()+(tree->getWidth()/2);
