@@ -42,7 +42,7 @@ int main(){
         (*behavList)[0]->update();
         (*behavList)[1]->update();
         cout<<*test;
-        cout<<test3->getRatio()<<endl;
+        cout<<test->getAge()<<endl;
         cout<<test->getWidth()<<endl;
         cout<<test->getHeight()<<endl;
         if(test3->isOld()) {

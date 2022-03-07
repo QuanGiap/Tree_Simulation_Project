@@ -2,6 +2,7 @@
 // Final Programming Assignment, 3/2/22
 
 #include "TreeBaseBehavior.h"
+#include <iostream>
 TreeBaseBehavior::TreeBaseBehavior(TreeBase& tree){
     this->tree = &tree;
     ratio = 1;
@@ -16,6 +17,7 @@ bool TreeBaseBehavior::isOld(){
 void TreeBaseBehavior::update(){
     count=(count+1)%ratio;
     grow(count==0);
+    cout<<ratio<<endl;
 }
 void TreeBaseBehavior::setRatio(int ratio){
     this->ratio = ratio;
