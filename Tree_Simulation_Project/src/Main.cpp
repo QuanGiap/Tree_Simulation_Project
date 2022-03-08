@@ -13,10 +13,6 @@ using namespace std;
 //and vector behavior and output the picture of 2 tree.
 int main(){
     srand (time(NULL));
-    char animateinput = 'n';
-    cout << "Animate trees? y/n ";
-    cin >> animateinput;
-    if(animateinput == 'y')
-      TreeGui treeScape(200,300);
+    TreeGui treeScape(25,25);
     return 0;
 }

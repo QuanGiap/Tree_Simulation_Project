@@ -32,11 +32,13 @@ private:
     void setAuto();
     void setPlantMode();
     void draw();
-    void createDataGrid(bool isOverride,int height,int width);
+    void createDataGrid(bool isOverride);
     vector<TreeBaseBehavior*> behavList;
     vector<vector<bool>>* gridTable;
     int gridSize;
     int months;
+    int width;
+    int height;
     bool isRunning;
     bool isPlanting;
     GWindow* gwin;

@@ -16,11 +16,11 @@ TreeGui::TreeGui(int height, int width) {
     isRunning = false;
     months = 0;
     isPlanting = false;
+    this->width = width;
+    this->height = height;
     //create data grid
-    createDataGrid(false,height,width);
-    //create test;
-    behavList.push_back(new Sapling(*new Lemon(10,false,gridTable)));
-    behavList.push_back(new Sapling(*new Lemon(25,false,gridTable)));
+    gridTable = new vector<vector<bool>>;
+    createDataGrid(false);
     //Add window
     gwin = new GWindow(GRID_SIZE*width+100, GRID_SIZE*height+100);
     gwin->setTitle("Tree Simulation");
@@ -58,20 +58,26 @@ TreeGui::TreeGui(int height, int width) {
     gwin->addToRegion(autoButton,GWindow::Region::REGION_SOUTH);
     autoButton->setActionListener([this]{setAuto();});
     plantButton->setActionListener([this]{setPlantMode();});
+    clearButton->setActionListener([this]{clear();});
     //holding the line operate else it will cause segmentation fault
     while(gwin->isOpen()){}
 }
-void TreeGui::createDataGrid(bool isOverride,int height,int width){
-    if(isOverride){
-        delete[] gridTable;
-    }
-    gridTable = new vector<vector<bool>>;
+void TreeGui::createDataGrid(bool isOverride){
     for(int i = 0;i < height;i++){
         vector<bool> temp;
         for(int j = 0;j<width;j++){
             temp.push_back(false);
         };
-        gridTable->push_back(temp);
+        if(isOverride) (*gridTable)[i] = temp;
+        else
+            gridTable->push_back(temp);
+    }
+    for(int i = 0;i < gridTable->size();i++){
+        for(int j = 0;j<gridTable[0].size();j++){
+            if((*gridTable)[i][j]) cout<<'X';
+            else cout<<'-';
+        }
+        cout<<endl;
     }
 }
 void TreeGui::clickGui(GEvent& e){
@@ -91,9 +97,20 @@ void TreeGui::addTree(int pos){
     else tree = new Orange(pos,isWater,gridTable);
     if(i == behavList.size()) behavList.push_back(new Sapling(*tree));
     else behavList.insert(behavList.begin()+i,new Sapling(*tree));
+    draw();
+    cout<<"Add done"<<endl;
+    cout<<behavList[0]->getTreeBase().getAge()<<endl;
 }
 void TreeGui::clear(){
-
+    if(behavList.size()!= 0){
+        for(int i = 0; i < behavList.size(); i++){
+                delete &behavList[i]->getTreeBase();
+                delete behavList[i];
+        }
+        behavList.clear();
+        createDataGrid(true);
+        months = 0;
+    }
 }
 void TreeGui::setAuto(){
     //comparing char, avoiding compare string to reduce run time complexity
@@ -130,44 +147,45 @@ void TreeGui::updateAll() {
     }
 }
 void TreeGui::updateTree(){
-    for(int i = 0; i < behavList.size(); i++) {
-        behavList[i]->update();
-        if(behavList[i]->isOld()) {
-            TreeBaseBehavior* copy = behavList[i]->switchState();
-            delete behavList[i];
-            behavList[i] = copy;
-        }
-    }
-    //check if any tree colided
-    for(int i = 0; i < behavList.size()-1; i++) {
-        if(behavList[i]->getTreeBase().isInTheWay(behavList[i+1]->getTreeBase())){
-            int height1 = behavList[i]->getTreeBase().getHeight();
-            int width1 = behavList[i]->getTreeBase().getWidth();
-            int height2 = behavList[i+1]->getTreeBase().getHeight();
-            int width2 = behavList[i+1]->getTreeBase().getWidth();
-            //which tree have larger area survive
-            if(height1*width1>height2*width2){
-            behavList[i+1]->getTreeBase().setDead(true);
-            }
-            else if(height1*width1<height2*width2){
-                behavList[i]->getTreeBase().setDead(true);
-            }
-            else{
-                int choice = rand()%2;
-                behavList[i+choice]->getTreeBase().setDead(true);
+    if(behavList.size()!= 0){
+        for(int i = 0; i < behavList.size(); i++) {
+            behavList[i]->update();
+            if(behavList[i]->isOld()) {
+                TreeBaseBehavior* copy = behavList[i]->switchState();
+                delete behavList[i];
+                behavList[i] = copy;
             }
         }
-    }
-    //delete any tree that is die
-    for(int i = 0; i < behavList.size(); i++){
-        if(behavList[i]->getTreeBase().getDead()){
-            delete &behavList[i]->getTreeBase();
-            delete behavList[i];
-            behavList.erase(behavList.begin()+i);
-            i--;
+        //check if any tree colided
+        for(int i = 0; i < behavList.size()-1; i++) {
+            if(behavList[i]->getTreeBase().isInTheWay(behavList[i+1]->getTreeBase())){
+                int height1 = behavList[i]->getTreeBase().getHeight();
+                int width1 = behavList[i]->getTreeBase().getWidth();
+                int height2 = behavList[i+1]->getTreeBase().getHeight();
+                int width2 = behavList[i+1]->getTreeBase().getWidth();
+                //which tree have larger area survive
+                if(height1*width1>height2*width2){
+                behavList[i+1]->getTreeBase().setDead(true);
+                }
+                else if(height1*width1<height2*width2){
+                    behavList[i]->getTreeBase().setDead(true);
+                }
+                else{
+                    int choice = rand()%2;
+                    behavList[i+choice]->getTreeBase().setDead(true);
+                }
+            }
+        }
+        //delete any tree that is die
+        for(int i = 0; i < behavList.size(); i++){
+            if(behavList[i]->getTreeBase().getDead()){
+                delete &behavList[i]->getTreeBase();
+                delete behavList[i];
+                behavList.erase(behavList.begin()+i);
+                i--;
+            }
         }
     }
-    cout<<"Done delete"<<endl;
 }
 void TreeGui::draw(){
     gcan->setColor("brown");
