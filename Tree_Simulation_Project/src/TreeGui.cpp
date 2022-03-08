@@ -3,7 +3,7 @@
 
 #include "TreeGui.h"
 #include <iostream>
-#include <console.h>
+#include <string>
 #include "TreeGui.h"
 #include "Lemon.h"
 #include "Apple.h"
@@ -12,6 +12,8 @@
 
 int const GRID_SIZE = 4;
 TreeGui::TreeGui(int height, int width) {
+    isRunning = false;
+    months = 0;
     //create data grid
     gridTable = new vector<vector<bool>>;
     for(int i = 0;i < height;i++){
@@ -28,11 +30,13 @@ TreeGui::TreeGui(int height, int width) {
     gwin = new GWindow(GRID_SIZE*width+100, GRID_SIZE*height+100);
     gwin->setTitle("Tree Simulation");
     gwin->setBackground("White");
-    gwin->setExitOnClose(true);
+    gwin->setExitOnClose(true);   
+    gwin->setTimerListener(500, [this]{updateAll();});
     //Add canvas
     gcan = new GCanvas(GRID_SIZE*width, GRID_SIZE*height);
     gcan->setBackground("blue");
-    gwin->setAutoRepaint(false);
+    gcan->setAutoRepaint(false);
+    gcan->setClickListener([this](GEvent e){clickGui(e);});
     gwin->addToRegion(gcan,GWindow::Region::REGION_CENTER);
     //Add GChooser
     gChosPlant = new GChooser();
@@ -47,6 +51,10 @@ TreeGui::TreeGui(int height, int width) {
     gtextArea = new GTextArea(3,100);
     gtextArea->setEditable(false);
     gwin->addToRegion(gtextArea,GWindow::Region::REGION_NORTH);
+    //add lable
+    lable = new GLabel("Month :");
+    lable->setSize(100,100);
+    gwin->addToRegion(lable,GWindow::Region::REGION_NORTH);
     //Add GButoon
     plantButton = new GButton("Plant mode");
     clearButton = new GButton("Clear");
@@ -59,25 +67,43 @@ TreeGui::TreeGui(int height, int width) {
     while(gwin->isOpen()){}
 }
 void TreeGui::clickGui(GEvent& e){
-
+    cout<<"X ="<<e.getX()<<", Y = "<<e.getY()<<endl;
+}
+void TreeGui::addTree(int pos){
+    int choice = gChosPlant->getSelectedIndex();
+    bool isWater = waterBox->isChecked();
+    TreeBase* tree;
+    int i = 0;
+    while(i < behavList.size() && behavList[i]->getTreeBase().getPlantPos()>pos){
+        i+=1;
+    }
+    if(choice == 0) tree = new Apple(pos,isWater,gridTable);
+    else if(choice == 1) tree = new Lemon(pos,isWater,gridTable);
+    else tree = new Orange(pos,isWater,gridTable);
+    if(i == behavList.size()) behavList.push_back(new Sapling(*tree));
+    else behavList.insert(behavList.begin()+i,new Sapling(*tree));
 }
 void TreeGui::setAuto(){
     //comparing char, avoiding compare string to reduce run time complexity
     if(autoButton->getText()[0] == 'S'){
         autoButton->setText("Turn off");
         autoButton->setBackground("red");
-        gwin->setTimerListener(1000, [this]{updateAll();});
+        isRunning = true;
     }
     else{
         autoButton->setText("Set auto on");
         autoButton->setBackground("white");
-        gwin->removeTimerListener();
+        isRunning = false;
     }
 }
 void TreeGui::updateAll() {
+    if(isRunning){
+    months +=1;
+    lable->setText("Month :"+to_string(months));
     gcan->clear();
     updateTree();
     draw();
+    }
 }
 void TreeGui::updateTree(){
     for(int i = 0; i < behavList.size(); i++) {

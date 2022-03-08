@@ -15,6 +15,7 @@
 #include "gchooser.h"
 #include "gcheckbox.h"
 #include "gtextarea.h"
+#include "glabel.h"
 using namespace sgl;
 class TreeGui
 {
@@ -33,11 +34,14 @@ private:
     vector<TreeBaseBehavior*> behavList;
     vector<vector<bool>>* gridTable;
     int gridSize;
+    int months;
+    bool isRunning;
     GWindow* gwin;
     GCanvas* gcan;
     GChooser* gChosPlant;
     GCheckBox* waterBox;
     GTextArea* gtextArea;
+    GLabel* lable;
     GButton* plantButton;
     GButton* clearButton;
     GButton* autoButton;
