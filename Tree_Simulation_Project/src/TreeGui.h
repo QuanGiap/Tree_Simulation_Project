@@ -30,12 +30,14 @@ private:
     void addTree(int pos);
     void updateTree();
     void setAuto();
+    void setPlantMode();
     void draw();
     vector<TreeBaseBehavior*> behavList;
     vector<vector<bool>>* gridTable;
     int gridSize;
     int months;
     bool isRunning;
+    bool isPlanting;
     GWindow* gwin;
     GCanvas* gcan;
     GChooser* gChosPlant;

@@ -60,7 +60,7 @@ bool TreeBase::isInTheWay(int plantLocation){
 bool TreeBase::canGrow(){
     int amount = isWater? getGrownSpeed() : getGrownSpeed()/2;
     AmountToGrown += amount;
-    if(AmountToGrown>100){
+    if(AmountToGrown>50){
         AmountToGrown = 0;
         return true;
     }

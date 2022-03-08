@@ -5,7 +5,7 @@
 Apple::Apple(int pos,bool isWater, vector<vector<bool>>*& table):TreeBase(pos,isWater,table){}
 
 int Apple::getGrownSpeed() const{
-    return 10;
+    return 8;
 }
 
 string Apple::getFruitColor() const{

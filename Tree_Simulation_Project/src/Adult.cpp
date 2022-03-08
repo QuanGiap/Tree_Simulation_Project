@@ -10,7 +10,7 @@ void Adult::giveFruit(){
 
 }
 bool Adult::isOld(){
-    return getTreeBase().getAge()>10;
+    return getTreeBase().getAge()>250;
 }
 TreeBaseBehavior* Adult::switchState(){
     return new Old(getTreeBase());

@@ -11,9 +11,11 @@
 #include "Sapling.h"
 
 int const GRID_SIZE = 4;
+int const DELAY = 250;
 TreeGui::TreeGui(int height, int width) {
     isRunning = false;
     months = 0;
+    isPlanting = false;
     //create data grid
     gridTable = new vector<vector<bool>>;
     for(int i = 0;i < height;i++){
@@ -31,7 +33,7 @@ TreeGui::TreeGui(int height, int width) {
     gwin->setTitle("Tree Simulation");
     gwin->setBackground("White");
     gwin->setExitOnClose(true);   
-    gwin->setTimerListener(500, [this]{updateAll();});
+    gwin->setTimerListener(DELAY, [this]{updateAll();});
     //Add canvas
     gcan = new GCanvas(GRID_SIZE*width, GRID_SIZE*height);
     gcan->setBackground("blue");
@@ -53,7 +55,6 @@ TreeGui::TreeGui(int height, int width) {
     gwin->addToRegion(gtextArea,GWindow::Region::REGION_NORTH);
     //add lable
     lable = new GLabel("Month :");
-    lable->setSize(100,100);
     gwin->addToRegion(lable,GWindow::Region::REGION_NORTH);
     //Add GButoon
     plantButton = new GButton("Plant mode");
@@ -63,18 +64,20 @@ TreeGui::TreeGui(int height, int width) {
     gwin->addToRegion(clearButton,GWindow::Region::REGION_SOUTH);
     gwin->addToRegion(autoButton,GWindow::Region::REGION_SOUTH);
     autoButton->setActionListener([this]{setAuto();});
+    plantButton->setActionListener([this]{setPlantMode();});
     //holding the line operate else it will cause segmentation fault
     while(gwin->isOpen()){}
 }
 void TreeGui::clickGui(GEvent& e){
-    cout<<"X ="<<e.getX()<<", Y = "<<e.getY()<<endl;
+    if(isPlanting)
+        addTree(e.getX()/GRID_SIZE);
 }
 void TreeGui::addTree(int pos){
     int choice = gChosPlant->getSelectedIndex();
     bool isWater = waterBox->isChecked();
     TreeBase* tree;
     int i = 0;
-    while(i < behavList.size() && behavList[i]->getTreeBase().getPlantPos()>pos){
+    while(i < behavList.size() && behavList[i]->getTreeBase().getPlantPos()<pos){
         i+=1;
     }
     if(choice == 0) tree = new Apple(pos,isWater,gridTable);
@@ -85,7 +88,7 @@ void TreeGui::addTree(int pos){
 }
 void TreeGui::setAuto(){
     //comparing char, avoiding compare string to reduce run time complexity
-    if(autoButton->getText()[0] == 'S'){
+    if(!isRunning){
         autoButton->setText("Turn off");
         autoButton->setBackground("red");
         isRunning = true;
@@ -94,6 +97,18 @@ void TreeGui::setAuto(){
         autoButton->setText("Set auto on");
         autoButton->setBackground("white");
         isRunning = false;
+    }
+}
+void TreeGui::setPlantMode(){
+    if(!isPlanting){
+        plantButton->setText("Cancel planting");
+        plantButton->setBackground("red");
+        isPlanting = true;
+    }
+    else{
+        plantButton->setText("Plant mode");
+        plantButton->setBackground("white");
+        isPlanting = false;
     }
 }
 void TreeGui::updateAll() {
@@ -143,6 +158,7 @@ void TreeGui::updateTree(){
             i--;
         }
     }
+    cout<<"Done delete"<<endl;
 }
 void TreeGui::draw(){
     gcan->setColor("brown");

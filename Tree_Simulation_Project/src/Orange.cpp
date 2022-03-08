@@ -7,7 +7,7 @@ Orange::Orange(int pos,bool isWater, vector<vector<bool>>*& table):TreeBase(pos,
 }
 
 int Orange::getGrownSpeed() const{
-    return 10;
+    return 7;
 }
 
 string Orange::getFruitColor() const{

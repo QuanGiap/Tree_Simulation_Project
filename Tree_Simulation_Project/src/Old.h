@@ -7,9 +7,9 @@
 // Grow in this Behaviour is always width;
 #ifndef OLD_H
 #define OLD_H
-#include "TreeBaseBehavior.h"
+#include "Adult.h"
 
-class Old:public TreeBaseBehavior{
+class Old:public Adult{
 public:
     Old(TreeBase& tree);
     //Return "Old"

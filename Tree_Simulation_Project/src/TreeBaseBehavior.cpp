@@ -16,10 +16,10 @@ bool TreeBaseBehavior::isOld(){
     return tree->getAge() > 0;
 }
 void TreeBaseBehavior::update(){
-    //if(tree->canGrow()){
+    if(tree->canGrow()){
     count=(count+1)%ratio;
     grow(count==0);
-    //}
+    }
     tree->setAge(tree->getAge()+1);
 }
 void TreeBaseBehavior::setRatio(int ratio){
