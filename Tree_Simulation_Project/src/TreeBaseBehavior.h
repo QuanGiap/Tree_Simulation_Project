@@ -10,6 +10,8 @@
 #include "TreeBase.h"
 class TreeBaseBehavior{
 public:
+    // The destructor of TreeBaseBehavior(empty function)
+    virtual ~TreeBaseBehavior();
     // The TreeBaseBehavior constructor accepts a reference to a TreeBase and
     // sets the private TreeBase member variable equal to the passed TreeBase.
     TreeBaseBehavior(TreeBase& tree);
@@ -42,13 +44,11 @@ public:
     // The getType member function returns a string representing the stage of
     // the tree. In this case it returns "Base behavior."
     virtual string getType() const;
-    int getRatio();
 private:
     // The private growWidth member function adds wood to each side of the 
     // current tree all the way up to one less of the previous layer.
     void growWidth();
     TreeBase* tree;
-    vector<vector<bool>> *data = new vector<vector<bool>>;
     int count;
     int ratio;
 };

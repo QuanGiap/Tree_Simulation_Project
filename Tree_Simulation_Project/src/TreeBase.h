@@ -13,6 +13,8 @@
 using namespace std;
 class TreeBase{
 public:
+  //The destructor of TreeBase(empty function)
+  virtual ~TreeBase();
   // The TreeBase constructor accepts an integer of the tree's horizontal
   // position, a boolean of if it's being watered, and a reference to the 2d 
   // vector it will grow in.
@@ -49,7 +51,7 @@ public:
   //Setting the tree bool base on param given
   void setDead(bool isDead);
   //check if the amount reach more than 100. Every time this function get called
-  //the amount if plus the grown speed. If it is not watered, grow speed is reduce by half
+  //the amount is plus the grown speed. If it is not watered, grow speed is reduce by half
   bool canGrow();
   //return vector location of the fruit, also can modified;
   vector<int>& setFruitLocate();
@@ -73,7 +75,7 @@ public:
   // The getType member function returns the string representation of the stage
   // the tree is currently in, which will be base in this case because the tree
   // has not been set yet.
-  virtual string getType() const;
+  virtual string getType() const = 0;
 private:
   string leafColor;
   bool isWater;

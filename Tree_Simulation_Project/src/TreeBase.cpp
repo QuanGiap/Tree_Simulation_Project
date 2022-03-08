@@ -16,6 +16,7 @@ TreeBase::TreeBase(int pos,bool isWater,vector<vector<bool>>*& table){
     plantPosition = pos;
     this->isWater = isWater;
 }
+TreeBase::~TreeBase(){}
 int TreeBase::getPlantPos() const{
     return plantPosition;
 }

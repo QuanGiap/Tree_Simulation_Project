@@ -2,49 +2,143 @@
 // Final Programming Assignment, 3/2/22
 
 #include "TreeGui.h"
-int const GRID_SIZE = 10;
-TreeGui::TreeGui(int height, int width, vector<TreeBaseBehavior*>*& behaviorList, vector<vector<bool>>*& table) {
-    this->table = table;
-    behavList = behaviorList;
-    gwin = new GWindow(GRID_SIZE*width, GRID_SIZE*height);
+#include <iostream>
+#include <console.h>
+#include "TreeGui.h"
+#include "Lemon.h"
+#include "Apple.h"
+#include "Orange.h"
+#include "Sapling.h"
+
+int const GRID_SIZE = 4;
+TreeGui::TreeGui(int height, int width) {
+    //create data grid
+    gridTable = new vector<vector<bool>>;
+    for(int i = 0;i < height;i++){
+        vector<bool> temp;
+        for(int j = 0;j<width;j++){
+            temp.push_back(false);
+        };
+        gridTable->push_back(temp);
+    }
+    //create test;
+    behavList.push_back(new Sapling(*new Lemon(10,false,gridTable)));
+    behavList.push_back(new Sapling(*new Lemon(25,false,gridTable)));
+    //Add window
+    gwin = new GWindow(GRID_SIZE*width+100, GRID_SIZE*height+100);
     gwin->setTitle("Tree Simulation");
     gwin->setBackground("White");
+    gwin->setExitOnClose(true);
+    //Add canvas
+    gcan = new GCanvas(GRID_SIZE*width, GRID_SIZE*height);
+    gcan->setBackground("blue");
     gwin->setAutoRepaint(false);
-    gwin->setTimerListener(1000, [this]{updateAll();});
+    gwin->addToRegion(gcan,GWindow::Region::REGION_CENTER);
+    //Add GChooser
+    gChosPlant = new GChooser();
+    gChosPlant->addItem("Apple");
+    gChosPlant->addItem("Lemon");
+    gChosPlant->addItem("Orange");
+    gwin->addToRegion(gChosPlant,GWindow::Region::REGION_SOUTH);
+    //Add checkbox
+    waterBox = new GCheckBox("Add water?");
+    gwin->addToRegion(waterBox,GWindow::Region::REGION_SOUTH);
+    //Add text area
+    gtextArea = new GTextArea(3,100);
+    gtextArea->setEditable(false);
+    gwin->addToRegion(gtextArea,GWindow::Region::REGION_NORTH);
+    //Add GButoon
+    plantButton = new GButton("Plant mode");
+    clearButton = new GButton("Clear");
+    autoButton = new GButton("Set auto on");
+    gwin->addToRegion(plantButton,GWindow::Region::REGION_SOUTH);
+    gwin->addToRegion(clearButton,GWindow::Region::REGION_SOUTH);
+    gwin->addToRegion(autoButton,GWindow::Region::REGION_SOUTH);
+    autoButton->setActionListener([this]{setAuto();});
+    //holding the line operate else it will cause segmentation fault
+    while(gwin->isOpen()){}
 }
+void TreeGui::clickGui(GEvent& e){
 
+}
+void TreeGui::setAuto(){
+    //comparing char, avoiding compare string to reduce run time complexity
+    if(autoButton->getText()[0] == 'S'){
+        autoButton->setText("Turn off");
+        autoButton->setBackground("red");
+        gwin->setTimerListener(1000, [this]{updateAll();});
+    }
+    else{
+        autoButton->setText("Set auto on");
+        autoButton->setBackground("white");
+        gwin->removeTimerListener();
+    }
+}
 void TreeGui::updateAll() {
-    gwin->clear();
-    gwin->toFront();
+    gcan->clear();
     updateTree();
     draw();
 }
 void TreeGui::updateTree(){
-    for(int i = 0; i < (*behavList).size(); i++) {
-        (*behavList)[i]->update();
+    for(int i = 0; i < behavList.size(); i++) {
+        behavList[i]->update();
+        if(behavList[i]->isOld()) {
+            TreeBaseBehavior* copy = behavList[i]->switchState();
+            delete behavList[i];
+            behavList[i] = copy;
+        }
     }
-}
-void TreeGui::draw(){
-    gwin->setColor("brown");
-    gwin->setFillColor("brown");
-    for(int j = 0; j < (*table).size(); j++) {
-        for(int k = 0; k < (*table)[0].size(); k++) {
-            if((*table)[j][k]) {
-                gwin->fillRect(GRID_SIZE * k, GRID_SIZE * j, GRID_SIZE, GRID_SIZE);
+    //check if any tree colided
+    for(int i = 0; i < behavList.size()-1; i++) {
+        if(behavList[i]->getTreeBase().isInTheWay(behavList[i+1]->getTreeBase())){
+            int height1 = behavList[i]->getTreeBase().getHeight();
+            int width1 = behavList[i]->getTreeBase().getWidth();
+            int height2 = behavList[i+1]->getTreeBase().getHeight();
+            int width2 = behavList[i+1]->getTreeBase().getWidth();
+            //which tree have larger area survive
+            if(height1*width1>height2*width2){
+            behavList[i+1]->getTreeBase().setDead(true);
+            }
+            else if(height1*width1<height2*width2){
+                behavList[i]->getTreeBase().setDead(true);
+            }
+            else{
+                int choice = rand()%2;
+                behavList[i+choice]->getTreeBase().setDead(true);
             }
         }
     }
-    gwin->setColor("green");
-    gwin->setFillColor("green");
-    for(int i = 0; i < (*behavList).size(); i++) {
-        int wid = (*behavList)[i]->getTreeBase().getWidth()*GRID_SIZE*3;
-        int hei = (*behavList)[i]->getTreeBase().getHeight()*GRID_SIZE;
-        int x = (((*behavList)[i]->getTreeBase().getPlantPos())*GRID_SIZE)-GRID_SIZE/2;
-        int y = ((*behavList)[i]->getTreeBase().getHeightData() - (*behavList)[i]->getTreeBase().getHeight())*GRID_SIZE;
+    //delete any tree that is die
+    for(int i = 0; i < behavList.size(); i++){
+        if(behavList[i]->getTreeBase().getDead()){
+            delete &behavList[i]->getTreeBase();
+            delete behavList[i];
+            behavList.erase(behavList.begin()+i);
+            i--;
+        }
+    }
+}
+void TreeGui::draw(){
+    gcan->setColor("brown");
+    gcan->setFillColor("brown");
+    for(int j = 0; j < gridTable->size(); j++) {
+        for(int k = 0; k < (*gridTable)[0].size(); k++) {
+            if((*gridTable)[j][k]) {
+                gcan->fillRect(GRID_SIZE * k, GRID_SIZE * j, GRID_SIZE, GRID_SIZE);
+            }
+        }
+    }
+    gcan->setColor("green");
+    gcan->setFillColor("green");
+    for(int i = 0; i < behavList.size(); i++) {
+        int wid = behavList[i]->getTreeBase().getWidth()*GRID_SIZE*3;
+        int hei = behavList[i]->getTreeBase().getHeight()*GRID_SIZE;
+        int x = ((behavList[i]->getTreeBase().getPlantPos())*GRID_SIZE)-GRID_SIZE/2;
+        int y = (behavList[i]->getTreeBase().getHeightData() - behavList[i]->getTreeBase().getHeight())*GRID_SIZE;
         GOval oval(0,0,wid,hei);
         oval.setCenterX(x);
         oval.setCenterY(y);
-        gwin->fillOval(oval.getBounds());
+        gcan->fillOval(oval.getBounds());
     }
-    gwin->repaint();
+    gcan->repaint();
 }

@@ -3,7 +3,6 @@
 
 #include "Sapling.h"
 #include "Adult.h"
-
 Sapling::Sapling(TreeBase& tree):TreeBaseBehavior(tree){
     setRatio(6);
 }

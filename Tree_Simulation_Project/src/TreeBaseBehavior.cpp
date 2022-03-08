@@ -3,6 +3,7 @@
 
 #include "TreeBaseBehavior.h"
 #include <iostream>
+TreeBaseBehavior::~TreeBaseBehavior(){}
 TreeBaseBehavior::TreeBaseBehavior(TreeBase& tree){
     this->tree = &tree;
     ratio = 2;
@@ -15,9 +16,11 @@ bool TreeBaseBehavior::isOld(){
     return tree->getAge() > 0;
 }
 void TreeBaseBehavior::update(){
+    //if(tree->canGrow()){
     count=(count+1)%ratio;
     grow(count==0);
-    cout<<ratio<<endl;
+    //}
+    tree->setAge(tree->getAge()+1);
 }
 void TreeBaseBehavior::setRatio(int ratio){
     this->ratio = ratio;
@@ -52,7 +55,6 @@ void TreeBaseBehavior::grow(bool isGrowW){
         }
         tree->setHeight(tree->getHeight()+1);
     }
-    tree->setAge(tree->getAge()+1);
 }
 TreeBase& TreeBaseBehavior::getTreeBase(){
     return *tree;

@@ -8,23 +8,39 @@
 #define TREEGUI_H
 #include "TreeBaseBehavior.h"
 #include "gwindow.h"
+#include "gwindow.h"
+#include "gbutton.h"
+#include "gcanvas.h"
+#include "gevent.h"
+#include "gchooser.h"
+#include "gcheckbox.h"
+#include "gtextarea.h"
 using namespace sgl;
 class TreeGui
 {
 public:
     // The TreeGui constructor accepts two integers representing the the height
-    // and width of the Gwindow, a reference to a vector of all the trees and 
-    // their behaviors, and a reference to a 2d vector representing the growing
-    // space of the trees.
-    TreeGui(int height, int width, vector<TreeBaseBehavior*>*& behavior,  vector<vector<bool>>*& table);
+    // and width of the grid data
+    TreeGui(int height, int width);
     void updateAll();
 private:
+    void clickGui(GEvent& e);
+    void clear();
+    void addTree(int pos);
     void updateTree();
+    void setAuto();
     void draw();
-    vector<TreeBaseBehavior*>* behavList;
-    vector<vector<bool>>* table;
+    vector<TreeBaseBehavior*> behavList;
+    vector<vector<bool>>* gridTable;
     int gridSize;
     GWindow* gwin;
+    GCanvas* gcan;
+    GChooser* gChosPlant;
+    GCheckBox* waterBox;
+    GTextArea* gtextArea;
+    GButton* plantButton;
+    GButton* clearButton;
+    GButton* autoButton;
 };
 
 #endif // TREEGUI_H
