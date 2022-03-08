@@ -17,14 +17,7 @@ TreeGui::TreeGui(int height, int width) {
     months = 0;
     isPlanting = false;
     //create data grid
-    gridTable = new vector<vector<bool>>;
-    for(int i = 0;i < height;i++){
-        vector<bool> temp;
-        for(int j = 0;j<width;j++){
-            temp.push_back(false);
-        };
-        gridTable->push_back(temp);
-    }
+    createDataGrid(false,height,width);
     //create test;
     behavList.push_back(new Sapling(*new Lemon(10,false,gridTable)));
     behavList.push_back(new Sapling(*new Lemon(25,false,gridTable)));
@@ -68,6 +61,19 @@ TreeGui::TreeGui(int height, int width) {
     //holding the line operate else it will cause segmentation fault
     while(gwin->isOpen()){}
 }
+void TreeGui::createDataGrid(bool isOverride,int height,int width){
+    if(isOverride){
+        delete[] gridTable;
+    }
+    gridTable = new vector<vector<bool>>;
+    for(int i = 0;i < height;i++){
+        vector<bool> temp;
+        for(int j = 0;j<width;j++){
+            temp.push_back(false);
+        };
+        gridTable->push_back(temp);
+    }
+}
 void TreeGui::clickGui(GEvent& e){
     if(isPlanting)
         addTree(e.getX()/GRID_SIZE);
@@ -85,6 +91,9 @@ void TreeGui::addTree(int pos){
     else tree = new Orange(pos,isWater,gridTable);
     if(i == behavList.size()) behavList.push_back(new Sapling(*tree));
     else behavList.insert(behavList.begin()+i,new Sapling(*tree));
+}
+void TreeGui::clear(){
+
 }
 void TreeGui::setAuto(){
     //comparing char, avoiding compare string to reduce run time complexity

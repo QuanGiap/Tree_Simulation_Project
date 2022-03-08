@@ -32,6 +32,7 @@ private:
     void setAuto();
     void setPlantMode();
     void draw();
+    void createDataGrid(bool isOverride,int height,int width);
     vector<TreeBaseBehavior*> behavList;
     vector<vector<bool>>* gridTable;
     int gridSize;
