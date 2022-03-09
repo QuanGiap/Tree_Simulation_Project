@@ -45,11 +45,13 @@ TreeGui::TreeGui(int height, int width) {
     gwin->addToRegion(waterBox,GWindow::Region::REGION_SOUTH);
     //Add text area
     gtextArea = new GTextArea(3,100);
-    gtextArea->setEditable(false);
+    gtextArea->setEditable(false);   
+    gtextArea->setFont("MS Shell Dlg 5");
     gwin->addToRegion(gtextArea,GWindow::Region::REGION_NORTH);
     //add lable
     lable = new GLabel("Month :");
-    gwin->addToRegion(lable,GWindow::Region::REGION_NORTH);
+    gwin->addToRegion(lable,GWindow::Region::REGION_NORTH);   
+    lable->setFont("MS Shell Dlg 10");
     //Add GButoon
     plantButton = new GButton("Plant mode");
     clearButton = new GButton("Clear");
@@ -75,14 +77,17 @@ void TreeGui::createDataGrid(bool isOverride){
 }
 void TreeGui::clickGui(GEvent& e){
     gtextArea->setText("");
+    //set to null ptr every time user click the gui
     treeInformation=nullptr;
     int plantPos = e.getX()/GRID_SIZE;
     if(isPlanting){
         int i = 0;
+        //checking if there is no trees in plant position
         while(i<behavList.size()
               && !behavList[i]->getTreeBase().isInTheWay(plantPos)){
             i++;
         }
+        //i == list of tree size --> no tree in the way
         if(i == behavList.size()){
             addTree(plantPos);
         }
@@ -91,7 +96,7 @@ void TreeGui::clickGui(GEvent& e){
         }
     }
     else{
-        //checking if there is any is at the click point
+        //checking if there is any tree is at the click point
         for(int i = 0;i<behavList.size()&&treeInformation == nullptr;i++){
             if(behavList[i]->getTreeBase().isInTheWay(plantPos)){
                 treeInformation = behavList[i];
@@ -100,10 +105,12 @@ void TreeGui::clickGui(GEvent& e){
     }
 }
 void TreeGui::addTree(int pos){
+    //determine which tree player choose
     int choice = gChosPlant->getSelectedIndex();
     bool isWater = waterBox->isChecked();
     TreeBase* tree;
     int i = 0;
+    //determine which slot tree should insert
     while(i < behavList.size()
           && behavList[i]->getTreeBase().getPlantPos()<pos){
         i+=1;
@@ -116,16 +123,15 @@ void TreeGui::addTree(int pos){
     draw();
 }
 void TreeGui::clear(){
-    //if(behavList.size()!= 0){
-        for(int i = 0; i < behavList.size(); i++){
-                delete &behavList[i]->getTreeBase();
-                delete behavList[i];
-        }
-        behavList.clear();
-        createDataGrid(true);
-        months = 0;
-        treeInformation = nullptr;
-    //}
+    for(int i = 0; i < behavList.size(); i++){
+            delete &behavList[i]->getTreeBase();
+            delete behavList[i];
+    }
+    behavList.clear();
+    createDataGrid(true);
+    months = 0;
+    //set to nullptr to avoid pointer error
+    treeInformation = nullptr;
 }
 void TreeGui::setAuto(){
     if(!isRunning){
@@ -167,7 +173,7 @@ void TreeGui::showInformation()const{
                +"Tree state: "+treeInformation->getType()+'\t'
                +"Age(Month): "+to_string(treeInformation->getTreeBase().getAge())+'\n'
                +"Height of the tree: "+to_string(treeInformation->getTreeBase().getHeight())+'\t'
-               +"Width of the tree: "+to_string(treeInformation->getTreeBase().getWidth())+'\n'
+               +"Width of the tree: "+to_string(treeInformation->getTreeBase().getWidth())+'\t'
                            +"Tree is water: "+isWater);
     }
 }
@@ -176,14 +182,18 @@ void TreeGui::updateTree(){
     if(behavList.size()!= 0){
         for(int i = 0; i < behavList.size(); i++) {
             behavList[i]->update();
+            //check if tree is old enough to switch state
             if(behavList[i]->isOld()) {
                 TreeBaseBehavior* copy = behavList[i]->switchState();
+                //check if the pointer tree for showing information is ==
+                //pointer tree begin to switch state
+                //avoiding the pointer to tree is got deleted
                 if(treeInformation == behavList[i]) treeInformation = copy;
                 delete behavList[i];
                 behavList[i] = copy;
             }
         }
-        //check if any tree coliled
+        //check if any tree collided
         for(int i = 0; i < behavList.size()-1; i++) {
             if(behavList[i]->getTreeBase().isInTheWay(behavList[i+1]->getTreeBase())){
                 int height1 = behavList[i]->getTreeBase().getHeight();
@@ -192,11 +202,12 @@ void TreeGui::updateTree(){
                 int width2 = behavList[i+1]->getTreeBase().getWidth();
                 //which tree have larger area survive
                 if(height1*width1>height2*width2){
-                behavList[i+1]->die();
+                     behavList[i+1]->die();
                 }
                 else if(height1*width1<height2*width2){
                     behavList[i]->die();
                 }
+                //if equal then if 50:50
                 else{
                     int choice = rand()%2;
                     behavList[i+choice]->die();

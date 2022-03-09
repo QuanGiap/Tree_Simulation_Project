@@ -44,10 +44,12 @@ private:
     //adding tree to the gui base on what
     //the user whant to plant and is it
     //water or not
+    //checking which position should insert in list of tree
+    //which is important to determine which tree collided
     void addTree(int pos);
     //updating the tree behavior grow
     //checking if any tree colided each other
-    //rthen remove any tree that is dead
+    //and then remove any tree that is dead
     void updateTree();
     //setting bool run true or false
     //and modified the text, the back ground color
