@@ -10,6 +10,7 @@
 #define TREE_BASE_H
 #include <string>
 #include <vector>
+#include <time.h>
 using namespace std;
 class TreeBase{
 public:

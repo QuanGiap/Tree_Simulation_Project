@@ -20,6 +20,8 @@ public:
     virtual bool isOld()override;
     //Return string Adult
     virtual string getType() const override;
+private:
+    TreeBase* tree;
 };
 
 #endif // ADULT_H
