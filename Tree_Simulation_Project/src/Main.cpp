@@ -13,6 +13,6 @@ using namespace std;
 //and vector behavior and output the picture of 2 tree.
 int main(){
     srand (time(NULL));
-    TreeGui treeScape(25,25);
+    TreeGui treeScape(200,300);
     return 0;
 }

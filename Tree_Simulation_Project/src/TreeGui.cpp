@@ -69,20 +69,24 @@ void TreeGui::createDataGrid(bool isOverride){
             temp.push_back(false);
         };
         if(isOverride) (*gridTable)[i] = temp;
-        else
-            gridTable->push_back(temp);
-    }
-    for(int i = 0;i < gridTable->size();i++){
-        for(int j = 0;j<gridTable[0].size();j++){
-            if((*gridTable)[i][j]) cout<<'X';
-            else cout<<'-';
-        }
-        cout<<endl;
+        else gridTable->push_back(temp);
     }
 }
 void TreeGui::clickGui(GEvent& e){
-    if(isPlanting)
-        addTree(e.getX()/GRID_SIZE);
+    gtextArea->setText("");
+    if(isPlanting){
+        int plantPos = e.getX()/GRID_SIZE;
+        int i = 0;
+        while(i<behavList.size() && behavList[i]->getTreeBase().isInTheWay(plantPos)){
+            i++;
+        }
+        if(i == behavList.size()){
+            addTree(plantPos);
+        }
+        else{
+            gtextArea->setText("Can't plant in that position");
+        }
+    }
 }
 void TreeGui::addTree(int pos){
     int choice = gChosPlant->getSelectedIndex();
@@ -99,7 +103,8 @@ void TreeGui::addTree(int pos){
     else behavList.insert(behavList.begin()+i,new Sapling(*tree));
     draw();
     cout<<"Add done"<<endl;
-    cout<<behavList[0]->getTreeBase().getAge()<<endl;
+    cout<<gridTable->size()<<endl;
+    cout<<gridTable[0].size()<<endl;
 }
 void TreeGui::clear(){
     if(behavList.size()!= 0){
