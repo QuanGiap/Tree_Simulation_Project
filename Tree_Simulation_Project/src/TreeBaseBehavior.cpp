@@ -9,10 +9,10 @@ TreeBaseBehavior::TreeBaseBehavior(TreeBase& tree){
     ratio = 2;
     count = 0;
 }
-bool TreeBaseBehavior::isWood(int i, int j){
+bool TreeBaseBehavior::isWood(int i, int j)const{
     return tree->isWood(i,j);
 }
-bool TreeBaseBehavior::isOld(){
+bool TreeBaseBehavior::isOld()const{
     return tree->getAge() > 0;
 }
 void TreeBaseBehavior::update(){
@@ -25,7 +25,7 @@ void TreeBaseBehavior::update(){
 void TreeBaseBehavior::setRatio(int ratio){
     this->ratio = ratio;
 }
-TreeBaseBehavior* TreeBaseBehavior::switchState(){
+TreeBaseBehavior* TreeBaseBehavior::switchState()const{
     return new TreeBaseBehavior(*tree);
 }
 void TreeBaseBehavior::growWidth(){
@@ -56,7 +56,7 @@ void TreeBaseBehavior::grow(bool isGrowW){
         tree->setHeight(tree->getHeight()+1);
     }
 }
-TreeBase& TreeBaseBehavior::getTreeBase(){
+TreeBase& TreeBaseBehavior::getTreeBase()const{
     return *tree;
 }
 

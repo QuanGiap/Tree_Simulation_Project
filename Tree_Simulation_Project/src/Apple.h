@@ -9,9 +9,16 @@
 #include"TreeBase.h"
 class Apple:public TreeBase{
 public:
+    // The Apple constructor accepts an integer of the tree's horizontal
+    // position, a boolean of if it's being watered, and a reference to the 2d
+    // vector it will grow in.
     Apple(int pos,bool isWater, vector<vector<bool>>*& table);
+    //return the grown speed 8
     virtual int getGrownSpeed()const override;
+    // The getFruitColor member function returns a string representing the
+    // color of the fruit being grown. Returns "red"
     virtual string getFruitColor() const override;
+    //return the string "Apple"
     virtual string getType() const override;
 };
 

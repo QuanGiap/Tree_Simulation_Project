@@ -11,8 +11,7 @@ class Orange:public TreeBase{
 public:
     // The Orange constructor
     Orange(int pos,bool isWater, vector<vector<bool>>*& table);
-    // The getGrownSpeed member function returns how quickly oranges grow on
-    // the tree's branches.
+    // return the grown speed 5
     virtual int getGrownSpeed() const override;
     // The getFruitColor member function returns a string representing the
     // color of the fruit being grown. Returns "orange."

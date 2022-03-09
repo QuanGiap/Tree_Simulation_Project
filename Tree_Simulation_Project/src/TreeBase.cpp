@@ -24,13 +24,13 @@ void TreeBase::setTrue(int i, int j){
     if(i>=0 && i<getHeightData() && j>=0 && j <getWidthData())
         (*data)[i][j] = true;
 }
-int TreeBase::getWidth(){
+int TreeBase::getWidth()const{
     return width;
 }
 void TreeBase::setWidth(int width){
     this->width = width;
 }
-int TreeBase::getHeight(){
+int TreeBase::getHeight()const{
     return height;
 }
 void TreeBase::setHeight(int height){
@@ -49,13 +49,16 @@ bool TreeBase::isWood(int col, int row)const{
     if(row<0||col<0||row>=getWidthData()||col>=getHeightData()) return false;
     return (*data)[col][row];
 }
-bool TreeBase::isInTheWay(TreeBase &other){
+bool TreeBase::isInTheWay(TreeBase &other)const{
     return (plantPosition+(width/2)) >= (other.getPlantPos()-other.getWidth()/2);
 }
-bool TreeBase::isInTheWay(int plantLocation){
+bool TreeBase::isInTheWay(int plantLocation)const{
     int areaRight = plantPosition + width/2;
     int areaLeft = plantPosition - width/2;
-    return (plantLocation>areaRight) || (plantLocation<areaLeft);
+    return (areaLeft<=plantLocation&&plantLocation<=areaRight);
+}
+bool TreeBase::isWatered()const{
+    return isWater;
 }
 bool TreeBase::canGrow(){
     int amount = isWater? getGrownSpeed() : getGrownSpeed()/2;
@@ -66,13 +69,13 @@ bool TreeBase::canGrow(){
     }
     return false;
 }
-bool TreeBase::getDead(){
+bool TreeBase::getDead()const{
     return isDead;
 }
 void TreeBase::setDead(bool isDead){
     this->isDead = isDead;
 }
-int TreeBase::getAge() {
+int TreeBase::getAge()const{
     return month;
 }
 void TreeBase::setAge(int age){

@@ -13,11 +13,11 @@ public:
     // The destructor of TreeBaseBehavior(empty function)
     virtual ~TreeBaseBehavior();
     // The TreeBaseBehavior constructor accepts a reference to a TreeBase and
-    // sets the private TreeBase member variable equal to the passed TreeBase.
+    // sets the private TreeBase member variable equal to the passed TreeBase Refrence.
     TreeBaseBehavior(TreeBase& tree);
     // The getTreeBase member variable returns the address of the private
     // member variable tree so it can be altered outside of the class.
-    TreeBase& getTreeBase();
+    TreeBase& getTreeBase() const;
     // The die member function stops the growth of the tree.
     void die();
     //setting ratio for the tree. Count
@@ -29,10 +29,10 @@ public:
     // The isWood member function accepts two integers representing the row and
     // column of the table and returns whether or not there is a peice of the
     // tree at that point. 
-    bool isWood(int i,int j);
+    bool isWood(int i,int j) const;
     // The switchState member function returns a new TreeBaseBehavior as a 
     // pointer with the private member variable tree passed to the constructor.
-    virtual TreeBaseBehavior* switchState();
+    virtual TreeBaseBehavior* switchState() const;
     // The update member function calls the grow function with a 50% chance to
     // pass true and grow the tree's width as well as height.
     // This function will be overrided by other class
@@ -40,7 +40,7 @@ public:
     // The isOld member function returns true if the tree's age has exceeded
     // the set limit for each stage of tree, which in this case would always
     // return false because the tree's stage starts at sapling.
-    virtual bool isOld();
+    virtual bool isOld() const;
     // The getType member function returns a string representing the stage of
     // the tree. In this case it returns "Base behavior."
     virtual string getType() const;

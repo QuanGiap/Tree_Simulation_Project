@@ -6,9 +6,13 @@
 Old::Old(TreeBase& tree):Adult(tree){
     setRatio(2);
 }
-bool Old::isOld(){
-    return false;
+bool Old::isOld()const{
+    return getTreeBase().getAge()>1000;
 }
 string Old::getType() const{
     return "Old";
+}
+TreeBaseBehavior* Old::switchState()const{
+    getTreeBase().setDead(true);
+    return new TreeBaseBehavior(getTreeBase());
 }

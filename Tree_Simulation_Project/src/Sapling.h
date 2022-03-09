@@ -11,15 +11,15 @@
 #include "TreeBaseBehavior.h"
 class Sapling:public TreeBaseBehavior{
 public:
-    // The Sapling constructor accepts a reference to a TreeBase and 
-    // initializes the private count variable for the new tree at zero.
+    // The Sapling constructor accepts a reference to a TreeBase and
+    // setting the ratio to 6 height : 1 width
     Sapling(TreeBase& tree);
     // The switchState member function returns a new Adult TreeBaseBehavior 
     // pointer to take the place of this Sapling TreeBaseBehavior.
-    virtual TreeBaseBehavior* switchState() override;
+    virtual TreeBaseBehavior* switchState() const override;
     // The isOld member function returns true if the age of the tree is over 5
     // ticks. Otherwise returns false.
-    virtual bool isOld() override;
+    virtual bool isOld() const override;
     // The getType member function returns a string representing the stage of
     // the tree is at so it may be identified easily. Returns "Sapling."
     virtual string getType() const override;
