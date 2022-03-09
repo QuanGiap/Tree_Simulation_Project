@@ -33,6 +33,7 @@ private:
     void setPlantMode();
     void draw();
     void createDataGrid(bool isOverride);
+    void showInformation();
     vector<TreeBaseBehavior*> behavList;
     vector<vector<bool>>* gridTable;
     int gridSize;
@@ -41,6 +42,7 @@ private:
     int height;
     bool isRunning;
     bool isPlanting;
+    TreeBaseBehavior* treeInformation;
     GWindow* gwin;
     GCanvas* gcan;
     GChooser* gChosPlant;

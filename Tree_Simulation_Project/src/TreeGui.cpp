@@ -14,6 +14,7 @@ int const GRID_SIZE = 4;
 int const DELAY = 250;
 TreeGui::TreeGui(int height, int width) {
     isRunning = false;
+    treeInformation = nullptr;
     months = 0;
     isPlanting = false;
     this->width = width;
@@ -74,10 +75,12 @@ void TreeGui::createDataGrid(bool isOverride){
 }
 void TreeGui::clickGui(GEvent& e){
     gtextArea->setText("");
+    treeInformation=nullptr;
+    int plantPos = e.getX()/GRID_SIZE;
     if(isPlanting){
-        int plantPos = e.getX()/GRID_SIZE;
         int i = 0;
-        while(i<behavList.size() && behavList[i]->getTreeBase().isInTheWay(plantPos)){
+        while(i<behavList.size()
+              && !behavList[i]->getTreeBase().isInTheWay(plantPos)){
             i++;
         }
         if(i == behavList.size()){
@@ -87,13 +90,22 @@ void TreeGui::clickGui(GEvent& e){
             gtextArea->setText("Can't plant in that position");
         }
     }
+    else{
+        treeInformation = nullptr;
+        for(int i = 0;i<behavList.size()&&treeInformation == nullptr;i++){
+            if(behavList[i]->getTreeBase().isInTheWay(plantPos)){
+                treeInformation = behavList[i];
+            }
+        }
+    }
 }
 void TreeGui::addTree(int pos){
     int choice = gChosPlant->getSelectedIndex();
     bool isWater = waterBox->isChecked();
     TreeBase* tree;
     int i = 0;
-    while(i < behavList.size() && behavList[i]->getTreeBase().getPlantPos()<pos){
+    while(i < behavList.size()
+          && behavList[i]->getTreeBase().getPlantPos()<pos){
         i+=1;
     }
     if(choice == 0) tree = new Apple(pos,isWater,gridTable);
@@ -101,10 +113,8 @@ void TreeGui::addTree(int pos){
     else tree = new Orange(pos,isWater,gridTable);
     if(i == behavList.size()) behavList.push_back(new Sapling(*tree));
     else behavList.insert(behavList.begin()+i,new Sapling(*tree));
+    cout<<"Add at "<<i<<endl;
     draw();
-    cout<<"Add done"<<endl;
-    cout<<gridTable->size()<<endl;
-    cout<<gridTable[0].size()<<endl;
 }
 void TreeGui::clear(){
     if(behavList.size()!= 0){
@@ -115,6 +125,7 @@ void TreeGui::clear(){
         behavList.clear();
         createDataGrid(true);
         months = 0;
+        treeInformation = nullptr;
     }
 }
 void TreeGui::setAuto(){
@@ -144,11 +155,23 @@ void TreeGui::setPlantMode(){
 }
 void TreeGui::updateAll() {
     if(isRunning){
-    months +=1;
-    lable->setText("Month :"+to_string(months));
     gcan->clear();
+    showInformation();
     updateTree();
     draw();
+    }
+}
+void TreeGui::showInformation(){
+    months +=1;
+    lable->setText("Month :"+to_string(months));
+    if(treeInformation!=nullptr){
+        string isWater = treeInformation->getTreeBase().isWatered() ? "True" : "False";
+        gtextArea->setText("Tree: "+treeInformation->getTreeBase().getType()+'\t'
+               +"Tree state: "+treeInformation->getType()+'\t'
+               +"Age(Month): "+to_string(treeInformation->getTreeBase().getAge())+'\n'
+               +"Height of the tree: "+to_string(treeInformation->getTreeBase().getHeight())+'\t'
+               +"Width of the tree: "+to_string(treeInformation->getTreeBase().getWidth())+'\n'
+                           +"Tree is water: "+isWater);
     }
 }
 void TreeGui::updateTree(){
@@ -157,6 +180,7 @@ void TreeGui::updateTree(){
             behavList[i]->update();
             if(behavList[i]->isOld()) {
                 TreeBaseBehavior* copy = behavList[i]->switchState();
+                if(treeInformation == behavList[i]) treeInformation = copy;
                 delete behavList[i];
                 behavList[i] = copy;
             }
@@ -184,6 +208,7 @@ void TreeGui::updateTree(){
         //delete any tree that is die
         for(int i = 0; i < behavList.size(); i++){
             if(behavList[i]->getTreeBase().getDead()){
+                if(treeInformation == behavList[i]) treeInformation = nullptr;
                 delete &behavList[i]->getTreeBase();
                 delete behavList[i];
                 behavList.erase(behavList.begin()+i);

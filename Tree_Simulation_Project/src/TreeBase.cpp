@@ -55,7 +55,10 @@ bool TreeBase::isInTheWay(TreeBase &other){
 bool TreeBase::isInTheWay(int plantLocation){
     int areaRight = plantPosition + width/2;
     int areaLeft = plantPosition - width/2;
-    return (plantLocation>areaRight) || (plantLocation<areaLeft);
+    return (areaLeft<=plantLocation&&plantLocation<=areaRight);
+}
+bool TreeBase::isWatered(){
+    return isWater;
 }
 bool TreeBase::canGrow(){
     int amount = isWater? getGrownSpeed() : getGrownSpeed()/2;

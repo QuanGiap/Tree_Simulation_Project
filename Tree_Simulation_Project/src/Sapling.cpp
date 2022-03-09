@@ -7,7 +7,7 @@ Sapling::Sapling(TreeBase& tree):TreeBaseBehavior(tree){
     setRatio(6);
 }
 bool Sapling::isOld(){
-    return getTreeBase().getAge() > 100;
+    return getTreeBase().getAge() > 200;
 }
 string Sapling::getType() const{
     return "Sapling";

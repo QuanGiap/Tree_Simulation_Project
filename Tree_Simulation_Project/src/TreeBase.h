@@ -53,6 +53,8 @@ public:
   //check if the amount reach more than 100. Every time this function get called
   //the amount is plus the grown speed. If it is not watered, grow speed is reduce by half
   bool canGrow();
+  //return if the tree is watered
+  bool isWatered();
   //return vector location of the fruit, also can modified;
   vector<int>& setFruitLocate();
   // The setTrue member function accepts two integers representing the row and
