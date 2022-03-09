@@ -9,6 +9,7 @@
 #ifndef ADULT_H
 #define ADULT_H
 #include "TreeBaseBehavior.h"
+#include <math.h>
 class Adult : public TreeBaseBehavior{
 public:
     // The Adult constructor accepts a reference to a TreeBase and

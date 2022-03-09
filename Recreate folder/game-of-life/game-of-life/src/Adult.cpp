@@ -7,10 +7,16 @@ Adult::Adult(TreeBase& tree):TreeBaseBehavior(tree){
     setRatio(3);
 }
 void Adult::giveFruit(){
+    srand(time(NULL));
+    vector<int> position;
     int possWidth = getTreeBase().getWidth() * 3;
-    int possHeight = getTreeBase().getHeight();
-    int x = getTreeBase().getPlantPos() - getTreeBase().getWidth()/2 + (rand() % possWidth);
-    int y = getTreeBase().getHeightData() - (possHeight / 2) + (rand() % possHeight);
+    int a = possWidth;
+    int b = getTreeBase().getHeight();
+    int h = getTreeBase().getPlantPos();
+    int k = getTreeBase().getHeight();
+    int x = h - (a / 2) + (rand() % possWidth);
+    int possHeight = sqrt((b * b) * ((a * a) - (h * h) + (2 * h * x) - (x * x) / (a * a))) * 2;
+    int y = k - (b / 2) + (rand() % possHeight);
     getTreeBase().setFruitLocate().push_back(x);
     getTreeBase().setFruitLocate().push_back(y);
 }
