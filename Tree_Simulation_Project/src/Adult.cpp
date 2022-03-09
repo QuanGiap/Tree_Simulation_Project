@@ -4,19 +4,17 @@
 #include "Adult.h"
 #include "Old.h"
 Adult::Adult(TreeBase& tree):TreeBaseBehavior(tree){
-    this->tree = &tree;
     setRatio(3);
 }
 void Adult::giveFruit(){
     srand(time(NULL));
     vector<int> position;
-    int possWidth = (*tree).getWidth() * 3;
-    int possHeight = (*tree).getHeight();
-    int x = (*tree).getPlantPos() - (*tree).getWidthData() + (rand() % possWidth);
-    int y = (*tree).getHeightData() - (possHeight / 2) + (rand() % possHeight);
-    position.resize(x);
-    position[x] = y;
-    (*tree).setFruitLocate() = position;
+    int possWidth = getTreeBase().getWidth() * 3;
+    int possHeight = getTreeBase().getHeight();
+    int x = getTreeBase().getPlantPos() - getTreeBase().getWidthData() + (rand() % possWidth);
+    int y = getTreeBase().getHeightData() - (possHeight / 2) + (rand() % possHeight);
+    getTreeBase().setFruitLocate().push_back(x);
+    getTreeBase().setFruitLocate().push_back(y);
 }
 bool Adult::isOld()const{
     return getTreeBase().getAge()>650;
