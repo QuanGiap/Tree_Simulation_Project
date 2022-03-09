@@ -1,16 +1,8 @@
-#include <iostream>
-#include <console.h>
 #include "TreeGui.h"
-#include "Lemon.h"
-#include "Apple.h"
-#include "Orange.h"
-#include "Sapling.h"
 #include <time.h>       /* time */
 using namespace std;
 
 //The main function only need to construct The GUI and run it.
-//This is beta version so it gonna need to construct the tree
-//and vector behavior and output the picture of 2 tree.
 int main(){
     srand (time(NULL));
     TreeGui treeScape(200,300);

@@ -20,7 +20,7 @@ public:
   // vector it will grow in.
   TreeBase(int pos,bool isWater, vector<vector<bool>>*& table);
   // The getAge member function returns the age of treeBase;
-  int getAge();
+  int getAge()const;
   // setting the age from tree base
   void setAge(int age);
   // The getWidthData member function returns the length of first index of vector data
@@ -31,30 +31,30 @@ public:
   // horizontal position at it's center of the tree.
   int getPlantPos()const;
   // The getHeight member function returns the height of tree base
-  int getHeight();
+  int getHeight()const;
   // The setHeight member function setting the height of tree base
   void setHeight(int height);
   // The getWidth member function returns the width of tree base
-  int getWidth();
+  int getWidth()const;
   // The setWidth member function setting the width of tree base
   void setWidth(int width);
   //Check if this tree is in the way of other tree. From left to right;
-  bool isInTheWay(TreeBase& other);
+  bool isInTheWay(TreeBase& other)const;
   //Check if the position going to plant is in the way of this tree
-  bool isInTheWay(int plantLocation);
+  bool isInTheWay(int plantLocation)const;
   // The isWood member function accepts two integers representing the row and
   // column of the table and returns whether or not there is a peice of the
   // tree at that point.
   bool isWood(int col,int row)const;
   //Return bool check if the tree is dead;
-  bool getDead();
+  bool getDead()const;
   //Setting the tree bool base on param given
   void setDead(bool isDead);
   //check if the amount reach more than 100. Every time this function get called
   //the amount is plus the grown speed. If it is not watered, grow speed is reduce by half
   bool canGrow();
   //return if the tree is watered
-  bool isWatered();
+  bool isWatered()const;
   //return vector location of the fruit, also can modified;
   vector<int>& setFruitLocate();
   // The setTrue member function accepts two integers representing the row and

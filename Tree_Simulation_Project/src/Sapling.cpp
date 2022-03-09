@@ -6,12 +6,12 @@
 Sapling::Sapling(TreeBase& tree):TreeBaseBehavior(tree){
     setRatio(6);
 }
-bool Sapling::isOld(){
+bool Sapling::isOld()const{
     return getTreeBase().getAge() > 200;
 }
 string Sapling::getType() const{
     return "Sapling";
 }
-TreeBaseBehavior* Sapling::switchState(){
+TreeBaseBehavior* Sapling::switchState()const{
     return new Adult(getTreeBase());
 }

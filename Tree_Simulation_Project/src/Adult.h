@@ -11,13 +11,15 @@
 #include "TreeBaseBehavior.h"
 class Adult : public TreeBaseBehavior{
 public:
+    // The Adult constructor accepts a reference to a TreeBase and
+    //setting the ratio to 3 height : 1 width
     Adult(TreeBase& tree);
     //update giving fruit position in vector position form from TreeBase datab (not write yet)
     virtual void giveFruit();
     //Return new TreeBaseBehavior* of "Old" state
-    virtual TreeBaseBehavior* switchState()override;
-    //check if the age reach requirement to switch state
-    virtual bool isOld()override;
+    virtual TreeBaseBehavior* switchState() const override;
+    //check if the age reach 450
+    virtual bool isOld() const override;
     //Return string Adult
     virtual string getType() const override;
 };

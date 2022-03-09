@@ -11,11 +11,15 @@
 
 class Old:public Adult{
 public:
+    // The Old constructor accepts a reference to a TreeBase and
+    // setting the ratio to 2 height : 1 width
     Old(TreeBase& tree);
     //Return "Old"
     virtual string getType() const override;
-    //Check if tree is old enough to die
-    virtual bool isOld() override;
+    //Always return true if the tree is 1000 months old
+    virtual bool isOld() const override;
+    //set the tree death is true then return TreeBaseBehavior
+    virtual TreeBaseBehavior* switchState() const override;
 };
 
 #endif // OLD_H

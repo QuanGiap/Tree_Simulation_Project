@@ -11,7 +11,7 @@
 #include "Sapling.h"
 
 int const GRID_SIZE = 4;
-int const DELAY = 250;
+int const DELAY = 100;
 TreeGui::TreeGui(int height, int width) {
     isRunning = false;
     treeInformation = nullptr;
@@ -53,7 +53,7 @@ TreeGui::TreeGui(int height, int width) {
     //Add GButoon
     plantButton = new GButton("Plant mode");
     clearButton = new GButton("Clear");
-    autoButton = new GButton("Set auto on");
+    autoButton = new GButton("Run");
     gwin->addToRegion(plantButton,GWindow::Region::REGION_SOUTH);
     gwin->addToRegion(clearButton,GWindow::Region::REGION_SOUTH);
     gwin->addToRegion(autoButton,GWindow::Region::REGION_SOUTH);
@@ -91,7 +91,7 @@ void TreeGui::clickGui(GEvent& e){
         }
     }
     else{
-        treeInformation = nullptr;
+        //checking if there is any is at the click point
         for(int i = 0;i<behavList.size()&&treeInformation == nullptr;i++){
             if(behavList[i]->getTreeBase().isInTheWay(plantPos)){
                 treeInformation = behavList[i];
@@ -113,11 +113,10 @@ void TreeGui::addTree(int pos){
     else tree = new Orange(pos,isWater,gridTable);
     if(i == behavList.size()) behavList.push_back(new Sapling(*tree));
     else behavList.insert(behavList.begin()+i,new Sapling(*tree));
-    cout<<"Add at "<<i<<endl;
     draw();
 }
 void TreeGui::clear(){
-    if(behavList.size()!= 0){
+    //if(behavList.size()!= 0){
         for(int i = 0; i < behavList.size(); i++){
                 delete &behavList[i]->getTreeBase();
                 delete behavList[i];
@@ -126,17 +125,16 @@ void TreeGui::clear(){
         createDataGrid(true);
         months = 0;
         treeInformation = nullptr;
-    }
+    //}
 }
 void TreeGui::setAuto(){
-    //comparing char, avoiding compare string to reduce run time complexity
     if(!isRunning){
-        autoButton->setText("Turn off");
+        autoButton->setText("Stop");
         autoButton->setBackground("red");
         isRunning = true;
     }
     else{
-        autoButton->setText("Set auto on");
+        autoButton->setText("Run");
         autoButton->setBackground("white");
         isRunning = false;
     }
@@ -161,8 +159,7 @@ void TreeGui::updateAll() {
     draw();
     }
 }
-void TreeGui::showInformation(){
-    months +=1;
+void TreeGui::showInformation()const{
     lable->setText("Month :"+to_string(months));
     if(treeInformation!=nullptr){
         string isWater = treeInformation->getTreeBase().isWatered() ? "True" : "False";
@@ -175,6 +172,7 @@ void TreeGui::showInformation(){
     }
 }
 void TreeGui::updateTree(){
+    months+=1;
     if(behavList.size()!= 0){
         for(int i = 0; i < behavList.size(); i++) {
             behavList[i]->update();
@@ -185,7 +183,7 @@ void TreeGui::updateTree(){
                 behavList[i] = copy;
             }
         }
-        //check if any tree colided
+        //check if any tree coliled
         for(int i = 0; i < behavList.size()-1; i++) {
             if(behavList[i]->getTreeBase().isInTheWay(behavList[i+1]->getTreeBase())){
                 int height1 = behavList[i]->getTreeBase().getHeight();
@@ -194,14 +192,14 @@ void TreeGui::updateTree(){
                 int width2 = behavList[i+1]->getTreeBase().getWidth();
                 //which tree have larger area survive
                 if(height1*width1>height2*width2){
-                behavList[i+1]->getTreeBase().setDead(true);
+                behavList[i+1]->die();
                 }
                 else if(height1*width1<height2*width2){
-                    behavList[i]->getTreeBase().setDead(true);
+                    behavList[i]->die();
                 }
                 else{
                     int choice = rand()%2;
-                    behavList[i+choice]->getTreeBase().setDead(true);
+                    behavList[i+choice]->die();
                 }
             }
         }
@@ -217,9 +215,18 @@ void TreeGui::updateTree(){
         }
     }
 }
+void TreeGui::drawOval(int x, int y, int height, int width, string color){
+    gcan->setColor(color);
+    gcan->setFillColor(color);
+    GOval oval(0,0,width,height);
+    oval.setCenterX(x);
+    oval.setCenterY(y);
+    gcan->fillOval(oval.getBounds());
+}
 void TreeGui::draw(){
     gcan->setColor("brown");
     gcan->setFillColor("brown");
+    //drawing the body of the tree
     for(int j = 0; j < gridTable->size(); j++) {
         for(int k = 0; k < (*gridTable)[0].size(); k++) {
             if((*gridTable)[j][k]) {
@@ -227,17 +234,22 @@ void TreeGui::draw(){
             }
         }
     }
-    gcan->setColor("green");
-    gcan->setFillColor("green");
+    //draw the leaf of the tree (ellipse shape)
     for(int i = 0; i < behavList.size(); i++) {
         int wid = behavList[i]->getTreeBase().getWidth()*GRID_SIZE*3;
         int hei = behavList[i]->getTreeBase().getHeight()*GRID_SIZE;
         int x = ((behavList[i]->getTreeBase().getPlantPos())*GRID_SIZE)-GRID_SIZE/2;
-        int y = (behavList[i]->getTreeBase().getHeightData() - behavList[i]->getTreeBase().getHeight())*GRID_SIZE;
-        GOval oval(0,0,wid,hei);
-        oval.setCenterX(x);
-        oval.setCenterY(y);
-        gcan->fillOval(oval.getBounds());
+        int y = (behavList[i]->getTreeBase().getHeightData() -
+                 behavList[i]->getTreeBase().getHeight())*GRID_SIZE;
+        drawOval(x, y, hei,wid,"green");
+        //drawing the fruit of the tree
+        vector<int>* fruitLocate = &behavList[i]->getTreeBase().setFruitLocate();
+        if(fruitLocate->size() != 0){
+            for(int i = 0;i<fruitLocate->size();i+=2){
+                drawOval((*fruitLocate)[i], (*fruitLocate)[i+1], GRID_SIZE*2,GRID_SIZE*2,
+                        behavList[i]->getTreeBase().getFruitColor());
+            }
+        }
     }
     gcan->repaint();
 }
