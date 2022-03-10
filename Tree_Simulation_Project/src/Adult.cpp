@@ -3,16 +3,36 @@
 
 #include "Adult.h"
 #include "Old.h"
+#include <math.h>
 Adult::Adult(TreeBase& tree):TreeBaseBehavior(tree){
     setRatio(3);
 }
 void Adult::giveFruit(){
-    int possWidth = getTreeBase().getWidth() * 3;
-    int possHeight = getTreeBase().getHeight();
-    int x = getTreeBase().getPlantPos() - getTreeBase().getWidth()/2 + (rand() % possWidth);
-    int y = getTreeBase().getHeightData() - (possHeight / 2) + (rand() % possHeight);
-    getTreeBase().setFruitLocate().push_back(x);
-    getTreeBase().setFruitLocate().push_back(y);
+    clearFruitLocation();
+    int treeArea = getTreeBase().getWidth() * getTreeBase().getHeight();
+    int amount = treeArea / 10;
+    int realAmount = getTreeBase().isWatered()? amount : amount/2;
+    int leafWidth = getTreeBase().getWidth() * 2.5;
+    int a = leafWidth/2;
+    int b = getTreeBase().getHeight()/4;
+    for(int i = 0; i < realAmount; i++) {
+        int x = rand() % (leafWidth) - a;
+        int randomRangeY = b * sqrt(1+((x*x)/(a*a)));
+        int y = rand() % (randomRangeY*2) - randomRangeY;
+        x = x + getTreeBase().getPlantPos();
+        y = y + (getTreeBase().getHeightData()-getTreeBase().getHeight());
+        if(x>0 && y<getTreeBase().getHeightData()){
+            getTreeBase().setFruitLocate().push_back(x);
+            getTreeBase().setFruitLocate().push_back(y);
+        }
+    }
+}
+void Adult::grow(bool isWidth){
+    giveFruit();
+    TreeBaseBehavior::grow(isWidth);
+}
+void Adult::clearFruitLocation(){
+    getTreeBase().setFruitLocate().clear();
 }
 bool Adult::isOld()const{
     return getTreeBase().getAge()>650;

@@ -1,5 +1,5 @@
 #include "TreeGui.h"
-#include <time.h>       /* time */
+#include <time.h>
 using namespace std;
 
 //The main function only need to construct The GUI and run it.

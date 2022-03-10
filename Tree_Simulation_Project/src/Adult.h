@@ -14,8 +14,11 @@ public:
     // The Adult constructor accepts a reference to a TreeBase and
     //setting the ratio to 3 height : 1 width
     Adult(TreeBase& tree);
+    void clearFruitLocation();
     //update giving fruit position in vector position form from TreeBase datab (not write yet)
     virtual void giveFruit();
+    //add giving fruit location every time the tree grow
+    virtual void grow(bool isWidth) override;
     //Return new TreeBaseBehavior* of "Old" state
     virtual TreeBaseBehavior* switchState() const override;
     //check if the age reach 450

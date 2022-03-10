@@ -255,11 +255,13 @@ void TreeGui::draw(){
         drawOval(x, y, hei,wid,"green");
         //drawing the fruit of the tree
         vector<int>* fruitLocate = &behavList[i]->getTreeBase().setFruitLocate();
+        string fruitColor = behavList[i]->getTreeBase().getFruitColor();
         if(fruitLocate->size() != 0){
             for(int i = 0;i<fruitLocate->size();i+=2){
-                drawOval((*fruitLocate)[i], (*fruitLocate)[i+1], GRID_SIZE*2,GRID_SIZE*2,
-                        behavList[i]->getTreeBase().getFruitColor());
+                drawOval((*fruitLocate)[i]*GRID_SIZE, (*fruitLocate)[i+1]*GRID_SIZE
+                        , GRID_SIZE*2,GRID_SIZE*2,fruitColor);
             }
+            cout<<"Done 1 tree"<<endl;
         }
     }
     gcan->repaint();

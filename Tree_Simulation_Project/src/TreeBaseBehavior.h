@@ -25,7 +25,7 @@ public:
     // The grow member function accepts a bool value representing whether or
     // not the tree is meant to grow and will add one to the tree's height if
     // the value is false and one to the width if it's true.
-    void grow(bool isGrowW);
+    virtual void grow(bool isGrowW);
     // The isWood member function accepts two integers representing the row and
     // column of the table and returns whether or not there is a peice of the
     // tree at that point. 
