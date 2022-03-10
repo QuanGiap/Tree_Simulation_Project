@@ -79,6 +79,7 @@ void TreeGui::clickGui(GEvent& e){
     gtextArea->setText("");
     //set to null ptr every time user click the gui
     treeInformation=nullptr;
+    //see which spot click in data grid horizontaly
     int plantPos = e.getX()/GRID_SIZE;
     if(isPlanting){
         int i = 0;
@@ -118,6 +119,7 @@ void TreeGui::addTree(int pos){
     if(choice == 0) tree = new Apple(pos,isWater,gridTable);
     else if(choice == 1) tree = new Lemon(pos,isWater,gridTable);
     else tree = new Orange(pos,isWater,gridTable);
+    //if tree is plant at the last spot
     if(i == behavList.size()) behavList.push_back(new Sapling(*tree));
     else behavList.insert(behavList.begin()+i,new Sapling(*tree));
     draw();
@@ -261,7 +263,6 @@ void TreeGui::draw(){
                 drawOval((*fruitLocate)[i]*GRID_SIZE, (*fruitLocate)[i+1]*GRID_SIZE
                         , GRID_SIZE*2,GRID_SIZE*2,fruitColor);
             }
-            cout<<"Done 1 tree"<<endl;
         }
     }
     gcan->repaint();

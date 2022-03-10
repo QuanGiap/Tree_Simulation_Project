@@ -9,6 +9,9 @@ Old::Old(TreeBase& tree):Adult(tree){
 bool Old::isOld()const{
     return getTreeBase().getAge()>1000;
 }
+void Old::grow(bool isWidth){
+    Adult::grow(isWidth);
+}
 string Old::getType() const{
     return "Old";
 }

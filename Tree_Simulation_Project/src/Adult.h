@@ -14,9 +14,6 @@ public:
     // The Adult constructor accepts a reference to a TreeBase and
     //setting the ratio to 3 height : 1 width
     Adult(TreeBase& tree);
-    void clearFruitLocation();
-    //update giving fruit position in vector position form from TreeBase datab (not write yet)
-    virtual void giveFruit();
     //add giving fruit location every time the tree grow
     virtual void grow(bool isWidth) override;
     //Return new TreeBaseBehavior* of "Old" state
@@ -25,6 +22,15 @@ public:
     virtual bool isOld() const override;
     //Return string Adult
     virtual string getType() const override;
+private:
+    //clear out the fruit location vector;
+    void clearFruitLocation();
+    //update giving fruit position in vector position from TreeBase data
+    //every even index is x, odd index is y
+    //doing calculating making the point is inside the leaf area (ellipse);
+    //giving out random x random range base on the width of the tree/2;
+    //then calculate the random range need to be for the y
+    virtual void giveFruit();
 };
 
 #endif // ADULT_H

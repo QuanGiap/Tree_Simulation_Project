@@ -33,10 +33,10 @@ private:
     /*
      * function will run if the user click on the canvas.
      * Clear out the text on lable. Set the tree pointer
-     * to null.
+     * to null pointer.
      * if the user is planning the tree, it will call
-     * plant tree fuction; else check if the click is
-     * at the growing tree
+     * plant tree fuction if the planting spot is valid
+     * else check if the click is at the growing tree
     */
     void clickGui(GEvent& e);
     //Clear out tree behavior list

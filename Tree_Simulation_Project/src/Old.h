@@ -14,6 +14,8 @@ public:
     // The Old constructor accepts a reference to a TreeBase and
     // setting the ratio to 2 height : 1 width
     Old(TreeBase& tree);
+    //use the grow function of adult else it will crash the program
+    virtual void grow(bool isWidth) override;
     //Return "Old"
     virtual string getType() const override;
     //Always return true if the tree is 1000 months old

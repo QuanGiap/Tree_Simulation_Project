@@ -21,7 +21,9 @@ void Adult::giveFruit(){
         int y = rand() % (randomRangeY*2) - randomRangeY;
         x = x + getTreeBase().getPlantPos();
         y = y + (getTreeBase().getHeightData()-getTreeBase().getHeight());
-        if(x>0 && y<getTreeBase().getHeightData()){
+        //making sure x and y is still in range of the grid table
+        if(x>0 && x<getTreeBase().getWidthData()
+                && y<getTreeBase().getHeightData()){
             getTreeBase().setFruitLocate().push_back(x);
             getTreeBase().setFruitLocate().push_back(y);
         }
