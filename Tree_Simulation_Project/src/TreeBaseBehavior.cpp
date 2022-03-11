@@ -33,9 +33,9 @@ void TreeBaseBehavior::growWidth(){
     int startSet = tree->getHeight() - tree->getWidth()+(tree->getWidth()/2);
     for(int i = startSet;i >=0;i--){
         //add wood on the left side tree
-        tree->setTrue(tree->getHeightData()-i-1,tree->getPlantPos()-offSet-1);
+        tree->setTrue(tree->getHeightData()-i-1,tree->getPlantPos()-offSet);
         //add wood in the right side tree
-        tree->setTrue(tree->getHeightData()-i-1,tree->getPlantPos()+offSet-1);
+        tree->setTrue(tree->getHeightData()-i-1,tree->getPlantPos()+offSet);
     }
     tree->setWidth(tree->getWidth()+2);
 }
@@ -49,9 +49,9 @@ void TreeBaseBehavior::grow(bool isGrowW){
         int startSet = tree->getHeightData() - tree->getHeight() - 1;
         for(int i = 0;i<setPosTime;i++){
             //add wood on the left side tree
-            tree->setTrue(startSet+i,tree->getPlantPos()-i-1);
+            tree->setTrue(startSet+i,tree->getPlantPos()-i);
             //add wood on the right side tree
-            tree->setTrue(startSet+i,tree->getPlantPos()+i-1);
+            tree->setTrue(startSet+i,tree->getPlantPos()+i);
         }
         tree->setHeight(tree->getHeight()+1);
     }

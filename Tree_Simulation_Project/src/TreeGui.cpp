@@ -134,6 +134,9 @@ void TreeGui::clear(){
     months = 0;
     //set to nullptr to avoid pointer error
     treeInformation = nullptr;
+    //clear out the gui
+     gcan->clear();
+     gcan->repaint();
 }
 void TreeGui::setAuto(){
     if(!isRunning){
@@ -181,7 +184,6 @@ void TreeGui::showInformation()const{
 }
 void TreeGui::updateTree(){
     months+=1;
-    if(behavList.size()!= 0){
         for(int i = 0; i < behavList.size(); i++) {
             behavList[i]->update();
             //check if tree is old enough to switch state
@@ -196,7 +198,8 @@ void TreeGui::updateTree(){
             }
         }
         //check if any tree collided
-        for(int i = 0; i < behavList.size()-1; i++) {
+        //need to check if size is not 0 else cause a crash
+        for(int i = 0;behavList.size() != 0 && i < behavList.size()-1; i++) {
             if(behavList[i]->getTreeBase().isInTheWay(behavList[i+1]->getTreeBase())){
                 int height1 = behavList[i]->getTreeBase().getHeight();
                 int width1 = behavList[i]->getTreeBase().getWidth();
@@ -226,7 +229,6 @@ void TreeGui::updateTree(){
                 i--;
             }
         }
-    }
 }
 void TreeGui::drawOval(int x, int y, int height, int width, string color){
     gcan->setColor(color);
@@ -251,7 +253,7 @@ void TreeGui::draw(){
     for(int i = 0; i < behavList.size(); i++) {
         int wid = behavList[i]->getTreeBase().getWidth()*GRID_SIZE*3;
         int hei = behavList[i]->getTreeBase().getHeight()*GRID_SIZE;
-        int x = ((behavList[i]->getTreeBase().getPlantPos())*GRID_SIZE)-GRID_SIZE/2;
+        int x = ((behavList[i]->getTreeBase().getPlantPos())*GRID_SIZE)+GRID_SIZE/2;
         int y = (behavList[i]->getTreeBase().getHeightData() -
                  behavList[i]->getTreeBase().getHeight())*GRID_SIZE;
         drawOval(x, y, hei,wid,"green");

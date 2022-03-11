@@ -26,7 +26,7 @@ public:
 private:
     /*
      * Main system of update. Function will
-     * show information of the tree if it pointed,
+     * show information of the tree if tree is pointed,
      * clear the gui, update trees and draw the gui.
      */
     void updateAll();
@@ -42,10 +42,12 @@ private:
     //Clear out tree behavior list
     void clear();
     //adding tree to the gui base on what
-    //the user whant to plant and is it
+    //the user want to plant and is it
     //water or not
     //checking which position should insert in list of tree
-    //which is important to determine which tree collided
+    //which is important to determine which tree collided in
+    //updateTree Function
+    //reducing time complexity from O(N^2) to O(N)
     void addTree(int pos);
     //updating the tree behavior grow
     //checking if any tree colided each other

@@ -18,7 +18,7 @@ public:
     virtual void grow(bool isWidth) override;
     //Return new TreeBaseBehavior* of "Old" state
     virtual TreeBaseBehavior* switchState() const override;
-    //check if the age reach 450
+    //check if the age reach 650
     virtual bool isOld() const override;
     //Return string Adult
     virtual string getType() const override;

@@ -5,14 +5,13 @@
 #include <iostream>
 using namespace std;
 TreeBase::TreeBase(int pos,bool isWater,vector<vector<bool>>*& table){
-    leafColor = "green";
     month = 0;
     width = 1;
     height = 2;
     data = table;
     isDead = false;
-    (*data)[getHeightData()-1][pos-1] = true;
-    (*data)[getHeightData()-2][pos-1] = true;
+    (*data)[getHeightData()-1][pos] = true;
+    (*data)[getHeightData()-2][pos] = true;
     plantPosition = pos;
     this->isWater = isWater;
 }
@@ -80,12 +79,6 @@ int TreeBase::getAge()const{
 }
 void TreeBase::setAge(int age){
     month = age;
-}
-string TreeBase::getLeafColor() const{
-    return leafColor;
-}
-void TreeBase::setLeafColor(const string& color){
-    leafColor = color;
 }
 int TreeBase::getGrownSpeed() const{
     return 0;

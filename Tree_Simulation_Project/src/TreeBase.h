@@ -62,12 +62,6 @@ public:
   // column of the table and sets that point equal to true, displaying a peice
   // of tree at that point.
   void setTrue(int i,int j);
-  // The getLeafColor member function returns the private string leafColor that
-  // represents the color of leaves the TreeBase has.
-  string getLeafColor() const;
-  // The setLeafColor member function accepts a reference string of the desired color and
-  // sets the private string leafColor to the given string.
-  void setLeafColor(const string& color);
   // The getGrownSpeed member function returns the integer representing how 
   // quickly the tree will grow each tick.
   virtual int getGrownSpeed() const;
@@ -80,7 +74,6 @@ public:
   // has not been set yet.
   virtual string getType() const = 0;
 private:
-  string leafColor;
   bool isWater;
   bool isDead;
   //the amount is enough to grow. Speed is based on grown speed sum

@@ -11,6 +11,7 @@
 class TreeBaseBehavior{
 public:
     // The destructor of TreeBaseBehavior(empty function)
+    //still need TreeBase constructor for other behavior
     virtual ~TreeBaseBehavior();
     // The TreeBaseBehavior constructor accepts a reference to a TreeBase and
     // sets the private TreeBase member variable equal to the passed TreeBase Refrence.
@@ -20,11 +21,11 @@ public:
     TreeBase& getTreeBase() const;
     // The die member function stops the growth of the tree.
     void die();
-    //setting ratio for the tree. Count
+    //setting ratio for the tree. How many time grow in height
     void setRatio(int ratio);
     // The grow member function accepts a bool value representing whether or
     // not the tree is meant to grow and will add one to the tree's height if
-    // the value is false and one to the width if it's true.
+    // the value is false, grow the width if it's true.
     virtual void grow(bool isGrowW);
     // The isWood member function accepts two integers representing the row and
     // column of the table and returns whether or not there is a peice of the
@@ -33,9 +34,9 @@ public:
     // The switchState member function returns a new TreeBaseBehavior as a 
     // pointer with the private member variable tree passed to the constructor.
     virtual TreeBaseBehavior* switchState() const;
-    // The update member function calls the grow function with a 50% chance to
-    // pass true and grow the tree's width as well as height.
-    // This function will be overrided by other class
+    // The update member function checking if the tree can grow.
+    // If tree can grow, tree will grow base on the ratio setting
+    // This function will get override in Adult class
     virtual void update();
     // The isOld member function returns true if the tree's age has exceeded
     // the set limit for each stage of tree, which in this case would always
