@@ -79,7 +79,7 @@ void TreeGui::clickGui(GEvent& e){
     gtextArea->setText("");
     //set to null ptr every time user click the gui
     treeInformation=nullptr;
-    //see which spot click in data grid horizontaly
+    //see which spot click in data grid in x direction.
     int plantPos = e.getX()/GRID_SIZE;
     if(isPlanting){
         int i = 0;
